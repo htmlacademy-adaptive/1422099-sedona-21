@@ -9,8 +9,8 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" width="101.7" height="84" src="img/logotype-mobile.svg" alt="City of Sedona">
+    <a href="index.html" class="page-header__logo">
+      <img class="page-header__logo-image" width="102" height="84" src="img/logotype-mobile.svg" alt="City of Sedona">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -19,7 +19,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link" href="">Главная</a>
+            <a class="main-nav__link" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -49,8 +49,10 @@
         <ul class="benefits__list">
           <li class="benefits__item">
             <h3 class="benefits__caption">Настоящий городок</h3>
-            <h3 class="benefits__number">-№1-</h3>
+            <p class="benefits__number">-№1-</p>
             <p class="benefits__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            <img width="520" height="260" src="https://via.placeholder.com/520x260"
+              alt="Американские флаги развиваются во дворике бледно-зелёного деревянного дома, а на фоне слегка размытого заднего плана виднеются скалистые горы.">
             <div class="details">
               <ul class="details__list">
                 <li class="details__item">
@@ -70,22 +72,24 @@
           </li>
           <li class="benefits__item">
             <h3 class="benefits__caption">Там есть мост дьявола</h3>
-            <h3 class="benefits__number">-№2-</h3>
+            <p class="benefits__number">-№2-</p>
             <p class="benefits__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <img width="520" height="260" src="https://via.placeholder.com/520x260"
+              alt="Тонкое и узское соединение двух краснокаменных скал, образующие своеобразный мост высоко над пропостью, пройти по которому кажется очень пугающе и опасно.">
           </li>
           <li class="benefits__item">
             <h3 class="benefits__caption">Небольшая площадь</h3>
-            <h3 class="benefits__number">-№3-</h3>
+            <p class="benefits__number">-№3-</p>
             <p class="benefits__desc">Все интересные места находятся очень близко</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__caption">Красивая дорога</h3>
-            <h3 class="benefits__number">-№4-</h3>
+            <p class="benefits__number">-№4-</p>
             <p class="benefits__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__caption">Мало туристов</h3>
-            <h3 class="benefits__number">-№5-</h3>
+            <p class="benefits__number">-№5-</p>
             <p class="benefits__desc">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
@@ -96,10 +100,11 @@
         <h2 class="service__headline">Заинтересовались?</h2>
         <p class="service__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           седоне</p>
-        <a class="service__link" href="service.html" target="_blank">Найти гостиницу</a>
+        <a class="service__link" href="#" target="_blank">Найти гостиницу</a>
       </div>
     </section>
     <section class="map">
+      <h2 class="visually-hidden">Встроенная интерактивная карта</h2>
       <!-- Временнная реализация карты -->
       <div class="map__wrapper">
         <img width="320" height="350" src="img/map-mobile.png" alt="">
@@ -111,6 +116,7 @@
     <div class="page-footer__wrapper">
       <p class="page-footer__hashtag">#VisitSedona</p>
       <section class="social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter"
