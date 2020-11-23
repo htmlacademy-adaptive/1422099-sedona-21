@@ -1,0 +1,116 @@
+.benefits__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefits__headline {
+  @include caption-style();
+
+  width: 100%;
+  margin: 0;
+  padding: 32px;
+}
+
+.benefits__subtitle {
+  width: 100%;
+  padding-bottom: 27px;
+  margin: 0;
+}
+
+.benefits__list {
+  @include list-reset();
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 21px 315.5px 0 315.5px;
+    border-color: #ffffff transparent transparent transparent;
+  }
+}
+
+.benefits__item {
+  background-color: $bg-grey;
+
+  &--main,
+  &--secondary {
+    color: $basic-white;
+    background-color: $main-color;
+  }
+}
+
+
+.benefits__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 320px;
+}
+
+.benefits__caption {
+  @include caption-style();
+
+  padding-top: 25px;
+
+  &--main {
+    padding-top: 55px;
+    color: $basic-white;
+  }
+
+  &--secondary {
+    padding-top: 39px;
+    color: $basic-white;
+  }
+}
+
+.benefits__number {
+  @include paragraph-style();
+
+  padding: 22px 0 24px 0;
+
+  &--main,
+  &--secondary {
+    padding: 20px 0 25px 0;
+  }
+}
+
+.benefits__desc {
+  @include paragraph-style();
+
+  padding-bottom: 24px;
+
+  &--main,
+  &--secondary {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  &--main::after {
+    content: "";
+    width: 520px;
+    height: 260px;
+    background: url("https://via.placeholder.com/520x260");
+    background-color: $bg-grey;
+    background-repeat: no-repeat;
+    margin-top: 39px;
+  }
+
+  &--secondary::after {
+    content: "";
+    width: 520px;
+    height: 260px;
+    background: url("https://via.placeholder.com/520x260");
+    background-color: $bg-grey;
+    background-repeat: no-repeat;
+    margin-top: 35px;
+  }
+}
+

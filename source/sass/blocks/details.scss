@@ -1,0 +1,24 @@
+.details__list {
+  @include list-reset();
+
+  text-align: start;
+  background-color: $basic-white;
+  color: $basic-black;
+  padding: 35px 11px 35px 70px;
+}
+
+.details__caption {
+  @include caption-style();
+
+  padding-bottom: 24px;
+}
+
+.details__text {
+  @include paragraph-style();
+
+  padding-bottom: 26px;
+}
+
+.details__item--last .details__text--last {
+  padding-bottom: 0;
+}

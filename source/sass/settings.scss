@@ -1,0 +1,50 @@
+/*-----------------------preSet---------------------*/
+$basic-white:#ffffff;
+$basic-black: #000000;
+$main-color: #81b3d2;
+$text-color: #333333;
+$main-color--hover: #669ec0;
+$main-color--down: #5496bd;
+$bg-grey: #eeeeee;
+
+
+body {
+  position: relative;
+  background-color: $basic-white;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: $text-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

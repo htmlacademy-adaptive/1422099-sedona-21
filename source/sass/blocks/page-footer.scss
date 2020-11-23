@@ -1,0 +1,12 @@
+.page-footer__hashtag {
+  @include caption-style();
+
+  font-size: 21px;
+  padding: 28.5px 0 35.5px 0;
+}
+
+.page-footer__copyright {
+  color: $basic-black;
+  margin: 0;
+  padding: 45px 0 26px 0;
+}

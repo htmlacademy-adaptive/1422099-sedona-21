@@ -1,0 +1,33 @@
+.social__list {
+  @include list-reset();
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social__item {
+  width: 46px;
+  height: 48px;
+  margin: 0 10px;
+  background-color: $main-color;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $main-color--hover;
+  }
+
+  &:active {
+    background-color: $main-color--down;
+  }
+}
+
+.social__link {
+  width: 46px;
+  height: 48px;
+  transform: translateY(30%);
+}
