@@ -1,0 +1,23 @@
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.page-header__logo-wrapper {
+  // outline: 4px solid tomato;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-header__toggle {
+  align-self: flex-end;
+  margin: 17px 20px;
+}
+
+.page-header__link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

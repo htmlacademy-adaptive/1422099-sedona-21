@@ -1,0 +1,32 @@
+.service__wrapper {
+  padding-top: 33px;
+  padding-bottom: 49px;
+}
+
+.service__headline {
+  @include caption-style();
+
+  font-size: 21px;
+}
+
+.service__text {
+  line-height: 24px;
+  margin-bottom: 27px;
+}
+
+.service__link {
+  @include caption-style();
+
+  padding: 14.5px 32px 17.5px 32px;
+  font-size: 21px;
+  color: $basic-white;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $main-color--hover;
+  }
+
+  &:active {
+    background-color: $main-color--down;
+  }
+}
