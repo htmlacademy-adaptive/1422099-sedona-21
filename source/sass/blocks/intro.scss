@@ -1,14 +1,26 @@
 .intro {
-  background: url("/img/back-mobile.jpg");
+  background: url("../img/back-mobile.jpg");
   background-color: #c5d4dc;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__wrapper {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .intro__headline {
-  margin-top: 85px;
-  margin-bottom: 90px;
-  overflow: hidden;
-}
+  margin-top: 50px;
+  margin-bottom: 10px;
 
+  &--index {
+    margin-top: 90px;
+    margin-bottom: 28px;
+  }
+}

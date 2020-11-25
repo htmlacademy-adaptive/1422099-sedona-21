@@ -1,4 +1,21 @@
 /*----------------mixins-------------------*/
+@mixin desktop {
+  @media screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
 
 @mixin list-reset() {
   margin: 0;
