@@ -1,0 +1,45 @@
+.review {
+  display: flex;
+  justify-content: center;
+}
+
+.review__wrapper {
+  width: 320px;
+  // padding: 0 10px;
+}
+
+.review__title {
+  @include caption-style();
+
+  padding-top: 36px;
+}
+
+.review__subtitle {
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+
+.review__item {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 0 15px 0;
+}
+
+.review__button {
+  @include caption-style();
+
+  border: none;
+  text-transform: uppercase;
+  color: $basic-white;
+  font-size: 21px;
+  padding: 18.5px 33px 13.5px 32px;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $main-color--hover;
+  }
+
+  &:active {
+    background-color: $main-color--down;
+  }
+}

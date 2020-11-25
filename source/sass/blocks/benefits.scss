@@ -46,7 +46,6 @@
   }
 }
 
-
 .benefits__item-wrapper {
   display: flex;
   flex-direction: column;
@@ -101,6 +100,10 @@
     background-color: $bg-grey;
     background-repeat: no-repeat;
     margin-top: 39px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &--secondary::after {
@@ -111,6 +114,9 @@
     background-color: $bg-grey;
     background-repeat: no-repeat;
     margin-top: 35px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-

@@ -4,14 +4,13 @@
   color: $basic-white;
 }
 
-
 .main-nav__list {
   @include list-reset();
 }
 
 .main-nav__item {
   box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2),
-  inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   padding-top: 10px;
   padding-bottom: 5px;
   cursor: pointer;
