@@ -16,7 +16,7 @@
 .details__text {
   @include paragraph-style();
 
-  padding-bottom: 26px;
+  padding: 0 10px 26px 0;
 }
 
 .details__item--last .details__text--last {
