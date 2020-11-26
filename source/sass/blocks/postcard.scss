@@ -1,0 +1,29 @@
+.postcard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 22px 20px 15px 20px;
+}
+
+.postcard__title {
+  font-weight: bold;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.postcard__like-counter {
+  font-weight: bold;
+  line-height: 24px;
+  margin: 0;
+  padding-left: 14px;
+}
+
+.postcard__username {
+  line-height: 24px;
+  text-transform: none;
+  text-align: start;
+  padding-bottom: 13px;
+  width: 100%;
+  margin: 0;
+}

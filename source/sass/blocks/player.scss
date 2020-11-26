@@ -1,0 +1,53 @@
+.player {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.player__screen {
+  position: relative;
+  display: flex;
+}
+
+.player__screen-image {
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.player__volume {
+  width: 280px;
+  height: 45px;
+  background-color: rgba($basic-black, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.player__volume-scale {
+  width: 235px;
+  height: 3px;
+  background-color: rgba($basic-white, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $basic-white;
+    position: absolute;
+    top: 0;
+    left: 17%;
+    transform: translateY(-35%);
+  }
+}
+
+.player__tools {
+  height: 66px;
+  background-color: #f2f2f2;
+}

@@ -14,7 +14,7 @@
 
 .benefits__subtitle {
   width: 100%;
-  padding-bottom: 27px;
+  padding: 0 10px 27px;
   margin: 0;
 }
 
@@ -33,11 +33,26 @@
     border-style: solid;
     border-width: 21px 315.5px 0 315.5px;
     border-color: #ffffff transparent transparent transparent;
+    z-index: 1;
+  }
+}
+
+.benefits__list li:nth-child(n+4) {
+  &::before {
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #d6d6d6;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 .benefits__item {
   background-color: $bg-grey;
+  position: relative;
 
   &--main,
   &--secondary {
@@ -83,7 +98,7 @@
 .benefits__desc {
   @include paragraph-style();
 
-  padding-bottom: 24px;
+  padding: 0 32px 24px;
 
   &--main,
   &--secondary {

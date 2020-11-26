@@ -1,0 +1,22 @@
+.videogram__wrapper {
+  margin: 0 auto;
+  width: 320px;
+  border-top: 1px solid #e5e5e5;
+  padding-bottom: 50px;
+}
+
+.videogram__title {
+  @include caption-style();
+
+  padding-top: 32px;
+}
+
+.videogram__subtitle {
+  line-height: 24px;
+  padding: 33px 22px;
+  margin: 0;
+}
+
+.videogram__player {
+  position: relative;
+}
