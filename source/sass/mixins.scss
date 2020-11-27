@@ -1,4 +1,31 @@
 /*----------------mixins-------------------*/
+@mixin container-mobile() {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 280px;
+  outline: 4px solid lime;
+  outline-offset: -4px;
+}
+
+@mixin container-desktop() {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  outline: 4px solid lime;
+  outline-offset: -4px;
+}
+
+@mixin container-tablet() {
+  max-width: 708px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  outline: 4px solid lime;
+  outline-offset: -4px;
+}
+
 @mixin desktop {
   @media screen and (max-width: $desktop-width) {
     @content;
@@ -15,6 +42,11 @@
   @media screen and (max-width: $mobile-width) {
     @content;
   }
+}
+
+@mixin outline() {
+  outline: 3px solid tomato;
+  outline-offset: -3px;
 }
 
 @mixin list-reset() {

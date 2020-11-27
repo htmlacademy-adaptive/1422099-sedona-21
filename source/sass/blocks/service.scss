@@ -7,11 +7,25 @@
   @include caption-style();
 
   font-size: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .service__text {
   line-height: 24px;
   margin-bottom: 27px;
+  padding: 0 15px;
+
+
+  @media (min-width: $tablet-width) {
+    width: 453px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 37px;
+  }
 }
 
 .service__link {

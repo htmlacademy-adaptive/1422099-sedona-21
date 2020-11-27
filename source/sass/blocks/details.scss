@@ -1,10 +1,29 @@
+.details {
+  background-color: $basic-white;
+  grid-column: 1/ span 2;
+}
+
+.details__wrapper {
+  display: flex;
+  max-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .details__list {
   @include list-reset();
 
   text-align: start;
   background-color: $basic-white;
   color: $basic-black;
-  padding: 35px 11px 35px 70px;
+  margin: 0;
+  padding: 35px 11px 35px 51px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .details__caption {

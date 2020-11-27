@@ -1,3 +1,15 @@
+.benefits {
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 43.5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+  }
+}
+
 .benefits__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -7,19 +19,29 @@
 .benefits__headline {
   @include caption-style();
 
-  width: 100%;
-  margin: 0;
-  padding: 32px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 520px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 483px;
+  }
 }
 
 .benefits__subtitle {
   width: 100%;
-  padding: 0 10px 27px;
-  margin: 0;
+  padding: 40px 12px 27px;
+  margin: 0 auto;
 }
 
 .benefits__list {
   @include list-reset();
+
+  width: 100%;
   position: relative;
 
   &::before {
@@ -28,12 +50,20 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 21px 315.5px 0 315.5px;
-    border-color: #ffffff transparent transparent transparent;
+    width: 320px;
+    height: 37px;
+    background: url("../img/white-triangle.svg");
     z-index: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 256px 256px;
   }
 }
 
@@ -48,30 +78,100 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .benefits__item {
+
   background-color: $bg-grey;
   position: relative;
 
-  &--main,
+
+  &--main {
+    color: $basic-white;
+    background-color: $main-color;
+  }
+
+
   &--secondary {
     color: $basic-white;
     background-color: $main-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--main {
+      grid-column: 1 / span 3;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 256px 1fr;
+    }
+
+    &--secondary {
+      grid-column: 1 / span 3;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.benefits__item-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    &--secondary {
+      grid-column: -1 / -2;
+    }
   }
 }
 
 .benefits__item-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 320px;
+  flex-wrap: wrap;
+
+  // &--main::after {
+  //   content: "";
+  //   width: 520px;
+  //   height: 260px;
+  //   background: url("https://via.placeholder.com/520x260") no-repeat;
+  //   background-color: $bg-grey;
+  //   background-size: cover;
+  //   background-position: center;
+  //   margin-top: 39px;
+
+  //   @include outline();
+  //   outline-color: rgb(0, 225, 255);
+  // }
+
+  // &--secondary::after {
+  //   content: "";
+  //   width: 520px;
+  //   height: 260px;
+  //   background: url("https://via.placeholder.com/520x260") no-repeat;
+  //   background-color: $bg-grey;
+  //   background-size: cover;
+  //   background-position: center;
+  //   margin-top: 35px;
+
+  //   @include outline();
+  //   outline-color: rgb(0, 225, 255);
+  // }
 }
 
 .benefits__caption {
   @include caption-style();
 
   padding-top: 25px;
+  width: 100%;
 
   &--main {
     padding-top: 55px;
@@ -87,6 +187,7 @@
 .benefits__number {
   @include paragraph-style();
 
+  width: 100%;
   padding: 22px 0 24px 0;
 
   &--main,
@@ -100,38 +201,11 @@
 
   padding: 0 32px 24px;
 
+
   &--main,
   &--secondary {
     display: flex;
     flex-direction: column;
-    padding-bottom: 0;
-  }
-
-  &--main::after {
-    content: "";
-    width: 520px;
-    height: 260px;
-    background: url("https://via.placeholder.com/520x260");
-    background-color: $bg-grey;
-    background-repeat: no-repeat;
-    margin-top: 39px;
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &--secondary::after {
-    content: "";
-    width: 520px;
-    height: 260px;
-    background: url("https://via.placeholder.com/520x260");
-    background-color: $bg-grey;
-    background-repeat: no-repeat;
-    margin-top: 35px;
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    padding-bottom: 35px;
   }
 }
