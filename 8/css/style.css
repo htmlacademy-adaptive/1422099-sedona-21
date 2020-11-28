@@ -71,6 +71,12 @@ img {
   font-display: swap; }
 
 /*----------------mixins-------------------*/
+@media (min-width: 1200px) {
+  .page__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+
 .page-header__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -208,6 +214,9 @@ img {
   width: 100%; }
   @media (min-width: 768px) {
     .main-nav__link {
+      font-size: 21px; } }
+  @media (min-width: 768px) {
+    .main-nav__link {
       font-size: 14px;
       line-height: 26px;
       color: #000000;
@@ -251,7 +260,7 @@ img {
     .intro {
       background: url("../img/back-desktop-large.jpg") no-repeat;
       background-position: center;
-      background-size: contain; }
+      background-size: cover; }
       .intro::after {
         content: "";
         min-width: 1200px;
@@ -263,22 +272,21 @@ img {
         transform: translateX(-50%); } }
 
 .intro__wrapper {
-  width: 282px;
-  height: 214px;
   margin-top: 50px;
   margin-bottom: 10px; }
   .intro__wrapper--index {
+    width: 282px;
+    height: 214px;
     margin-top: 90px;
     margin-bottom: 85px;
     background: url("../img/text-index.svg") no-repeat;
     background-size: cover; }
   @media (min-width: 768px) {
-    .intro__wrapper {
+    .intro__wrapper--index {
       width: 461px;
-      height: 349.97px; }
-      .intro__wrapper--index {
-        margin-top: 78px;
-        margin-bottom: 90px; } }
+      height: 349.97px;
+      margin-top: 78px;
+      margin-bottom: 90px; } }
   @media (min-width: 1200px) {
     .intro__wrapper {
       width: 459.5px;
@@ -311,6 +319,9 @@ img {
   max-width: 280px;
   margin: 0 auto;
   padding: 0 10px; }
+  @media (min-width: 768px) {
+    .benefits__headline {
+      font-size: 21px; } }
   @media (min-width: 768px) {
     .benefits__headline {
       max-width: 520px; } }
@@ -405,6 +416,9 @@ img {
   color: #000000;
   padding-top: 25px;
   width: 100%; }
+  @media (min-width: 768px) {
+    .benefits__caption {
+      font-size: 21px; } }
   .benefits__caption--main {
     padding-top: 55px;
     color: #ffffff; }
@@ -464,6 +478,9 @@ img {
   line-height: 26px;
   color: #000000;
   padding-bottom: 24px; }
+  @media (min-width: 768px) {
+    .details__caption {
+      font-size: 21px; } }
 
 .details__text {
   padding: 0;
@@ -476,7 +493,13 @@ img {
 
 .service__wrapper {
   padding-top: 33px;
-  padding-bottom: 49px; }
+  padding-bottom: 49px;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .service__wrapper {
+      width: 453px;
+      margin: 0 auto; } }
 
 .service__headline {
   padding: 0;
@@ -488,6 +511,9 @@ img {
   font-size: 21px; }
   @media (min-width: 768px) {
     .service__headline {
+      font-size: 21px; } }
+  @media (min-width: 768px) {
+    .service__headline {
       font-size: 30px;
       margin-bottom: 40px; } }
 
@@ -497,10 +523,16 @@ img {
   padding: 0 15px; }
   @media (min-width: 768px) {
     .service__text {
-      width: 453px;
       padding: 0;
       margin: 0 auto;
-      margin-bottom: 37px; } }
+      margin-bottom: 37px;
+      text-align: center;
+      white-space: pre;
+      text-indent: 2em;
+      position: relative;
+      left: -6%; }
+      .service__text::first-line {
+        text-align: center; } }
 
 .service__link {
   padding: 0;
@@ -509,14 +541,21 @@ img {
   font-weight: bold;
   line-height: 26px;
   color: #000000;
+  margin: 0 auto;
   padding: 14.5px 32px 17.5px 32px;
   font-size: 21px;
   color: #ffffff;
   background-color: #81b3d2; }
+  @media (min-width: 768px) {
+    .service__link {
+      font-size: 21px; } }
   .service__link:hover {
     background-color: #669ec0; }
   .service__link:active {
     background-color: #5496bd; }
+  @media (min-width: 768px) {
+    .service__link {
+      width: 100%; } }
 
 .page-footer__hashtag {
   padding: 0;
@@ -527,6 +566,9 @@ img {
   color: #000000;
   font-size: 21px;
   padding: 28.5px 0 35.5px 0; }
+  @media (min-width: 768px) {
+    .page-footer__hashtag {
+      font-size: 21px; } }
 
 .page-footer__copyright {
   color: #000000;
@@ -576,6 +618,9 @@ img {
   line-height: 26px;
   color: #000000;
   padding-top: 36px; }
+  @media (min-width: 768px) {
+    .review__title {
+      font-size: 21px; } }
 
 .review__subtitle {
   line-height: 24px;
@@ -599,6 +644,9 @@ img {
   font-size: 21px;
   padding: 18.5px 33px 13.5px 32px;
   background-color: #81b3d2; }
+  @media (min-width: 768px) {
+    .review__button {
+      font-size: 21px; } }
   .review__button:hover {
     background-color: #669ec0; }
   .review__button:active {
@@ -658,6 +706,9 @@ img {
   padding: 15px 17px;
   position: relative;
   width: 100%; }
+  @media (min-width: 768px) {
+    .form__label--checkbox {
+      font-size: 21px; } }
 
 .form__label--checkbox::before {
   position: absolute;
@@ -684,6 +735,9 @@ img {
   position: relative;
   width: 100%;
   padding: 15px 17px; }
+  @media (min-width: 768px) {
+    .form__label--radioButton {
+      font-size: 21px; } }
 
 .form__label--radioButton::before {
   position: absolute;
@@ -708,6 +762,9 @@ img {
   line-height: 26px;
   color: #000000;
   padding: 10px 0; }
+  @media (min-width: 768px) {
+    .form__heading {
+      font-size: 21px; } }
 
 .form__input {
   padding: 0;
@@ -721,6 +778,9 @@ img {
   border: none;
   padding: 18px 22px 14px 22px;
   width: inherit; }
+  @media (min-width: 768px) {
+    .form__input {
+      font-size: 21px; } }
   .form__input--username {
     flex-grow: 1;
     width: 200px; }
@@ -742,6 +802,11 @@ img {
     color: #000000;
     text-transform: none;
     color: #000000; }
+    @media (min-width: 768px) {
+      .form__input::-moz-placeholder {
+        font-size: 21px; }
+      .form__input::placeholder {
+        font-size: 21px; } }
   .form__input--checkbox {
     display: none; }
   .form__input--checkbox:checked ~ label::before {
@@ -792,6 +857,11 @@ img {
     font-weight: bold;
     line-height: 26px;
     color: #000000; }
+    @media (min-width: 768px) {
+      .form__textarea::-moz-placeholder {
+        font-size: 21px; }
+      .form__textarea::placeholder {
+        font-size: 21px; } }
 
 .photogallery__wrapper {
   display: flex;
@@ -808,6 +878,9 @@ img {
   color: #000000;
   padding: 10px;
   margin: 14px 0 0; }
+  @media (min-width: 768px) {
+    .photogallery__title {
+      font-size: 21px; } }
 
 .photogallery__subtitle {
   line-height: 24px;
@@ -862,6 +935,9 @@ img {
   line-height: 26px;
   color: #000000;
   padding-top: 32px; }
+  @media (min-width: 768px) {
+    .videogram__title {
+      font-size: 21px; } }
 
 .videogram__subtitle {
   line-height: 24px;
