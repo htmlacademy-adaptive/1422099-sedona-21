@@ -1,17 +1,47 @@
 .page-header__wrapper {
   display: flex;
-  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  min-height: 56px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .page-header__logo-wrapper {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  max-width: 280px;
+  min-height: 56px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+  }
 }
 
 .page-header__toggle {
-  align-self: flex-end;
-  margin: 17px 20px;
+  content: "";
+  width: 22px;
+  height: 22.9px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__link {
@@ -19,4 +49,30 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
+
+  &::after {
+    content: "";
+    width: 101.6px;
+    height: 84px;
+    background: url("../img/logotype-mobile.svg");
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      background: url("../img/logotype-tablet.svg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      width: 186.6px;
+      height: 96.43px;
+      background: url("../img/logotype-desktop.svg");
+    }
+  }
 }

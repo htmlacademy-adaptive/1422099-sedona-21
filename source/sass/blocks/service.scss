@@ -1,22 +1,52 @@
 .service__wrapper {
   padding-top: 33px;
   padding-bottom: 49px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: 453px;
+    margin: 0 auto;
+  }
 }
 
 .service__headline {
   @include caption-style();
 
   font-size: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .service__text {
   line-height: 24px;
   margin-bottom: 27px;
+  padding: 0 15px;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 37px;
+    text-align: center;
+    white-space: pre;
+    text-indent: 2em;
+    position: relative;
+    left: -6%;
+
+    &::first-line {
+      text-align: center;
+    }
+  }
 }
 
 .service__link {
   @include caption-style();
 
+  margin: 0 auto;
   padding: 14.5px 32px 17.5px 32px;
   font-size: 21px;
   color: $basic-white;
@@ -28,5 +58,9 @@
 
   &:active {
     background-color: $main-color--down;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
 }
