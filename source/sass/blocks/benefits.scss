@@ -24,6 +24,7 @@
   padding: 0 10px;
 
   @media (min-width: $tablet-width) {
+    // font-size: 21px;
     max-width: 520px;
   }
 
@@ -182,6 +183,9 @@
     padding-top: 39px;
     color: $basic-white;
   }
+
+  // @media (min-width: $tablet-width) {
+  // }
 }
 
 .benefits__number {

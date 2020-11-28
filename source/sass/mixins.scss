@@ -62,6 +62,10 @@
   font-weight: bold;
   line-height: 26px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 @mixin paragraph-style() {

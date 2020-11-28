@@ -56,12 +56,12 @@
 }
 
 .intro__wrapper {
-  width: 282px;
-  height: 214px;
   margin-top: 50px;
   margin-bottom: 10px;
 
   &--index {
+    width: 282px;
+    height: 214px;
     margin-top: 90px;
     margin-bottom: 85px;
     background: url("../img/text-index.svg") no-repeat;
@@ -69,10 +69,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 461px;
-    height: 349.97px;
-
     &--index {
+      width: 461px;
+      height: 349.97px;
       margin-top: 78px;
       margin-bottom: 90px;
     }
