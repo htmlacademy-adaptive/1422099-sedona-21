@@ -1,7 +1,13 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .form__list {
   @include list-reset();
 
-  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +24,20 @@
 
   &--checkbox {
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--checkbox {
+      margin-left: 95px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--checkbox {
+      margin-left: 0;
+    }
   }
 }
 
@@ -38,19 +58,34 @@
 
   &--checkbox {
     width: 100%;
-    justify-content: center;
+    flex-grow: 1;
   }
 
   &--radioButton {
     width: 100%;
     justify-content: center;
   }
+
+  @media (min-width: $tablet-width) {
+    &--radioButton {
+      justify-content: flex-start;
+    }
+
+    &--checkbox {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--checkbox {
+      width: auto;
+    }
+  }
 }
 
 .form__label {
   &--username {
     padding: 0 12px 0 10px;
-    flex-grow: 1;
   }
 
   &--user-contact {
@@ -63,9 +98,11 @@
     @include caption-style();
 
     text-transform: none;
-    padding: 15px 17px;
+    padding: 15px 0 15px 79px;
     position: relative;
     width: 100%;
+    display: flex;
+    justify-items: flex-start;
   }
 
   &--checkbox::before {
@@ -89,7 +126,10 @@
     text-transform: none;
     position: relative;
     width: 100%;
-    padding: 15px 17px;
+    padding: 15px 0;
+    padding-left: 78px;
+    display: flex;
+    justify-content: flex-start;
   }
 
   &--radioButton::before {
@@ -106,6 +146,26 @@
     content: "";
     transition-timing-function: ease-in-out;
     transition-duration: 0.3s;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--radiobutton {
+      padding-left: 75px;
+    }
+
+    &--checkbox {
+      padding: 15px 0 15px 80px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--radiobutton {
+      padding-left: 79px;
+    }
+
+    &--checkbox {
+      padding: 15px 0 15px 81px;
+    }
   }
 }
 
@@ -126,7 +186,6 @@
 
   &--username {
     flex-grow: 1;
-    width: 200px;
   }
 
   &::placeholder {
@@ -182,17 +241,24 @@
     box-shadow: inset 20px 30px rgba($text-color, 0.3);
     border: 12px solid $bg-input-down;
   }
+
+  @media (min-width: $tablet-width) {
+
+  }
 }
 
 .form__textarea {
   font: inherit;
   background: $bg-input;
   border: none;
-  max-width: 279px;
   resize: none;
   padding: 13px 21px;
+  width: 100%;
 
   &::placeholder {
     @include caption-style();
+  }
+
+  @media (min-width: $tablet-width) {
   }
 }

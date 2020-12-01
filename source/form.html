@@ -5,16 +5,14 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__link">
-          <img class="page-header__logo-image" width="102" height="84" src="img/logotype-mobile.svg"
-            alt="City of Sedona">
-        </a>
+        <a href="index.html" class="page-header__link"></a>
         <button class="page-header__toggle" type="button">=
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -43,15 +41,7 @@
   <main class="page-main">
     <section class="intro">
       <h2 class="visually-hidden">Добро пожаловать на сайт Седона! Сейчас вы в разделе размещения отзыва.</h2>
-      <div class="intro__wrapper">
-        <img class="intro__headline" width="229" height="50" src="img/SEDONA.svg"
-          alt="Добро пожаловать на сайт Седона! Услуги поиска гостиниц в великолепном городке Седона, в штате Аризона.">
-        <svg class="intro__triangle" width="320" height="57" viewBox="0 0 320 57" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M-190.171 23.7L-440 0V57H-190.171H160.55L-190.171 0V23.7Z" fill="white"></path>
-          <path d="M511.271 23.7V0L160.55 57H511.271H761V0L511.271 23.7Z" fill="white"></path>
-        </svg>
-      </div>
+      <div class="intro__wrapper intro__wrapper--form"></div>
     </section>
     <section class="review">
       <div class="review__wrapper">
@@ -80,7 +70,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review__item">
+          <fieldset class="review__item review__item--user-contact">
             <p class="form__heading">Контактная информация:</p>
             <ul class="form__list form__list--user-contact">
               <li class="form__item form__item--user-contact">
@@ -95,7 +85,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review__item form__item--radioButton">
+          <fieldset class="review__item review__item--radioButton">
             <p class="form__heading">Ваше общее впечатление:</p>
             <ul class="form__list form__list--radioButton">
               <li class="form__item form__item--radioButton">
@@ -115,7 +105,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review__item">
+          <fieldset class="review__item review__item--checkbox">
             <p class="form__heading">
               Посещенные достопримечательности:
             </p>
@@ -140,12 +130,15 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review__item">
+          <fieldset class="review__item review__item--user-comment">
             <p class="form__heading">Опишите свои эмоции:</p>
             <textarea class="form__textarea" name="author-emotions" id="author-emotions" cols="27" rows="6"
               placeholder="Опишите подробно все свои востроги"></textarea>
           </fieldset>
-          <button class="review__button button" type="submit">Отправить отзыв</button>
+          <div class="review__bottom">
+            <button class="review__button button" type="submit">Отправить отзыв</button>
+            <p class="review__inputinfo">* &#8212 обязательные поля</p>
+         </div>
         </form>
       </div>
     </section>
