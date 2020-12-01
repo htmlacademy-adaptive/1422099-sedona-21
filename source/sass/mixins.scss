@@ -1,29 +1,32 @@
 /*----------------mixins-------------------*/
 @mixin container-mobile() {
-  margin: 0;
+  margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-  max-width: 280px;
-  outline: 4px solid lime;
-  outline-offset: -4px;
+  max-width: 320px;
+  // background-color: rgba(magenta, 0.15);
+  // outline: 4px solid lime;
+  // outline-offset: -4px;
 }
 
 @mixin container-desktop() {
-  max-width: 1120px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
-  outline: 4px solid lime;
-  outline-offset: -4px;
+  padding: 0 120px;
+  // background-color: rgba(red, 0.15);
+  // outline: 4px solid red;
+  // outline-offset: -4px;
 }
 
 @mixin container-tablet() {
-  max-width: 708px;
+  max-width: 768px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
-  outline: 4px solid lime;
-  outline-offset: -4px;
+  padding: 0 59px;
+  // background-color: rgba(lime, 0.15);
+  // outline: 4px solid lime;
+  // outline-offset: -4px;
 }
 
 @mixin desktop {
