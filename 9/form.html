@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="https://htmlacademy-adaptive.github.io/1422099-sedona-21/9/">
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo-wrapper">
+        <a href="index.html" class="page-header__link"></a>
+        <button class="page-header__toggle" type="button">=
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="form.html">Форма
+                отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="intro">
+      <h2 class="visually-hidden">Добро пожаловать на сайт Седона! Сейчас вы в разделе размещения отзыва.</h2>
+      <div class="intro__wrapper intro__wrapper--form"></div>
+    </section>
+    <section class="review">
+      <div class="review__wrapper">
+        <h1 class="review__title">Оставьте свой отзыв</h1>
+        <p class="review__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
+          достопримечательностях</p>
+        <form class="review__form form" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
+          method="post">
+          <fieldset class="review__item review__item--username">
+            <p class="form__heading">Представьтесь:</p>
+            <ul class="form__list form__list--username">
+              <li class="form__item form__item--username">
+                <label class="form__label form__label--username" for="author-name">Имя*:</label>
+                <input class="form__input form__input--username" type="text" name="author-name" id="author-name"
+                  placeholder="Петр" required>
+              </li>
+              <li class="form__item form__item--username">
+                <label class="form__label form__label--username" for="author-surname">Фамилия*:</label>
+                <input class="form__input form__input--username" type="text" name="author-sunrame" id="author-surname"
+                  placeholder="Иванов" required>
+              </li>
+              <li class="form__item form__item--username">
+                <label class="form__label form__label--username" for="author-patronyme">Отчество:</label>
+                <input class="form__input form__input--username" type="text" name="author-patronyme"
+                  id="author-patronyme" placeholder="Александрович">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review__item review__item--user-contact">
+            <p class="form__heading">Контактная информация:</p>
+            <ul class="form__list form__list--user-contact">
+              <li class="form__item form__item--user-contact">
+                <label class="form__label form__label--user-contact" for="call-author">Контактный телефон*:</label>
+                <input class="form__input form__input--tel" type="tel" name="author-phone" id="call-author"
+                  placeholder="Введите телефон" required>
+              </li>
+              <li class="form__item form__item--user-contact">
+                <label class="form__label form__label--user-contact" for="write-author">Электронная почта*:</label>
+                <input class="form__input form__input--email" type="email" name="author-email" id="write-author"
+                  placeholder="Введите e-mail" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review__item review__item--radioButton">
+            <p class="form__heading">Ваше общее впечатление:</p>
+            <ul class="form__list form__list--radioButton">
+              <li class="form__item form__item--radioButton">
+                <input class="form__input form__input--radioButton" type="radio" name="general-opinion"
+                  id="opinion-positive" value="positive" checked>
+                <label class="form__label form__label--radioButton" for="opinion-positive">Скорее положительное</label>
+              </li>
+              <li class="form__item form__item--radioButton">
+                <input class="form__input form__input--radioButton" type="radio" name="general-opinion"
+                  id="opinion-negative" value="negative">
+                <label class="form__label form__label--radioButton" for="opinion-negative">Скорее отрицательное</label>
+              </li>
+              <li class="form__item form__item--radioButton">
+                <input class="form__input form__input--radioButton" type="radio" name="general-opinion"
+                  id="opinion-neutrally" value="neutrally">
+                <label class="form__label form__label--radioButton" for="opinion-neutrally">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review__item review__item--checkbox">
+            <p class="form__heading">
+              Посещенные достопримечательности:
+            </p>
+            <ul class="form__list form__list--checkbox">
+              <li class="form__item checkbox form__item--checkbox">
+                <input class="form__input form__input--checkbox" type="checkbox" name="bridge-of-devil" id="task-1"
+                  checked>
+                <label class="form__label form__label--checkbox" for="task-1">Мост Дьявола</label>
+              </li>
+              <li class="form__item checkbox form__item--checkbox">
+                <input class="form__input form__input--checkbox" type="checkbox" name="Bell-Mountain" id="task-2"
+                  checked>
+                <label class="form__label form__label--checkbox" for="task-2">Гора-Колокол</label>
+              </li>
+              <li class="form__item checkbox form__item--checkbox">
+                <input class="form__input form__input--checkbox" type="checkbox" name="Slide-park" id="task-3" checked>
+                <label class="form__label form__label--checkbox" for="task-3">Слайд-парк</label>
+              </li>
+              <li class="form__item checkbox form__item--checkbox">
+                <input class="form__input form__input--checkbox" type="checkbox" name="red-rocks" id="task-4">
+                <label class="form__label form__label--checkbox" for="task-4">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review__item review__item--user-comment">
+            <p class="form__heading">Опишите свои эмоции:</p>
+            <textarea class="form__textarea" name="author-emotions" id="author-emotions" cols="27" rows="6"
+              placeholder="Опишите подробно все свои востроги"></textarea>
+          </fieldset>
+          <div class="review__bottom">
+            <button class="review__button button" type="submit">Отправить отзыв</button>
+            <p class="review__inputinfo">* &#8212 обязательные поля</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__hashtag">#VisitSedona</p>
+      <section class="social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter"
+              href="https://twitter.com/htmlacademy_ru?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"><span class="visually-hidden">Читай нас в Twitter</span> </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+              target="_blank"><span class="visually-hidden">Мы в Фейсбуке</span> </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy"
+              target="_blank"><span class="visually-hidden">Смотри нас на Youtube</span></a>
+          </li>
+        </ul>
+      </section>
+      <p class="page-footer__copyright">Разработано</p>
+    </div>
+  </footer>
+</body>
+
+</html>
