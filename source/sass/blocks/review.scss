@@ -36,10 +36,6 @@
     font-size: 30px;
     margin: 0 auto;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .review__subtitle {
@@ -65,6 +61,7 @@
       order: -1;
       width: 50%;
     }
+
     &--username {
       width: 50%;
     }

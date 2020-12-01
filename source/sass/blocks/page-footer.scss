@@ -12,7 +12,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,7 +37,6 @@
 .page-footer__copyright {
   margin: 0;
   color: $basic-black;
-  margin: 0;
   margin-top: 45px;
   margin-bottom: 26px;
 

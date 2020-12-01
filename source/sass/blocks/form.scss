@@ -241,10 +241,6 @@
     box-shadow: inset 20px 30px rgba($text-color, 0.3);
     border: 12px solid $bg-input-down;
   }
-
-  @media (min-width: $tablet-width) {
-
-  }
 }
 
 .form__textarea {
@@ -257,8 +253,5 @@
 
   &::placeholder {
     @include caption-style();
-  }
-
-  @media (min-width: $tablet-width) {
   }
 }
