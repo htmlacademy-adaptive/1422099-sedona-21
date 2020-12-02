@@ -1,19 +1,40 @@
 .player {
-  width: 280px;
-  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 
 .player__screen {
   position: relative;
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .player__screen-image {
+  width: 100%;
+  height: 201px;
+  background: url("https://via.placeholder.com/320x201");
   background-position: center;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 500px;
+    background: url("https://via.placeholder.com/648x500") no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    background: url("https://via.placeholder.com/800x500") no-repeat;
+  }
 }
 
 .player__volume {
@@ -22,7 +43,13 @@
   background-color: rgba($basic-black, 0.6);
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .player__volume-scale {
@@ -48,6 +75,12 @@
 }
 
 .player__tools {
+  width: 280px;
+  margin: 0 auto;
   height: 66px;
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
