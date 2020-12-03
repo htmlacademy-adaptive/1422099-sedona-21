@@ -50,10 +50,12 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 320px;
+    width: 100%;
     height: 37px;
-    background: url("../img/white-triangle.svg");
+    background: url("../img/white-triangle.svg") no-repeat;
     z-index: 1;
+    background-position: bottom;
+    background-size: cover;
   }
 
   @media (min-width: $tablet-width) {
@@ -87,38 +89,48 @@
 }
 
 .benefits__item {
-
   background-color: $bg-grey;
   position: relative;
-
+  padding-bottom: 24px;
 
   &--main {
     color: $basic-white;
     background-color: $main-color;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
   }
-
 
   &--secondary {
     color: $basic-white;
     background-color: $main-color;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
 
     &--main {
       grid-column: 1 / span 3;
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: 256px 1fr;
+      padding-top: 0;
     }
 
     &--secondary {
       grid-column: 1 / span 3;
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 2fr 1fr;
       grid-template-rows: 1fr;
+      padding-top: 0;
     }
   }
 }
@@ -127,12 +139,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
-  max-width: 320px;
   margin: 0 auto;
 
+  &--main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
   @media (min-width: $tablet-width) {
+    &--main {
+      width: 256px;
+    }
+
     &--secondary {
-      grid-column: -1 / -2;
+      order: 1;
+      width: 256px;
     }
   }
 }
@@ -140,6 +163,8 @@
 .benefits__caption {
   @include caption-style();
   width: 100%;
+  margin-bottom: 19px;
+  margin-top: 25px;
 
   &--main {
     color: $basic-white;
@@ -147,6 +172,7 @@
 
   &--secondary {
     color: $basic-white;
+    margin-top: 39px;
   }
 }
 
@@ -154,14 +180,58 @@
   @include paragraph-style();
 
   width: 100%;
+  margin-bottom: 26px;
 }
 
 .benefits__desc {
   @include paragraph-style();
 
-  &--main,
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  &--main {
+    margin-bottom: 39px;
+  }
+
   &--secondary {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 35px;
+  }
+}
+
+.benefits__image {
+  margin: 0 auto;
+
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 256px;
+  }
+}
+
+.benefits__item--main .benefits__image {
+  @media (min-width: $tablet-width) {
+    background: url("../img/photo-city@1x-tablet.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/photo-city@1x.jpg") no-repeat;
+  }
+}
+
+.benefits__item--secondary .benefits__image {
+  @media (min-width: $tablet-width) {
+    background: url("../img/photo-bridge@1x-tablet.jpg") no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin: 0 auto 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/photo-bridge@1x.jpg") no-repeat;
   }
 }

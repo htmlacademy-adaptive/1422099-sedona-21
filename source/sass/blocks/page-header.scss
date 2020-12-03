@@ -30,20 +30,6 @@
   }
 }
 
-.page-header__toggle {
-  content: "";
-  width: 22px;
-  height: 22.9px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .page-header__link {
   position: absolute;
   top: 0;

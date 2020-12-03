@@ -13,11 +13,11 @@
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
         <a href="index.html" class="page-header__link"></a>
-        <button class="page-header__toggle" type="button">
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
-      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
@@ -54,6 +54,8 @@
               <p class="benefits__desc benefits__desc--main">Седона не аттракцион для туристов, там течет своя жизнь
               </p>
             </div>
+            <div class="benefits__image"></div>
+            <!-- <img width="520" height="260" src="https://via.placeholder.com/520x260" alt="Американские флаги развиваются во дворике бледно-зелёного деревянного дома, а на фоне слегка размытого заднего плана виднеются скалистые горы."> -->
             <section class="details">
               <div class="detail__wrapper">
                 <ul class="details__list">
@@ -82,7 +84,9 @@
               <p class="benefits__desc benefits__desc--secondary">Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </div>
-          </li>
+            <div class="benefits__image"></div>
+            <!-- <img width="520" height="260" src="https://via.placeholder.com/520x260" alt="Тонкое и узское соединение двух краснокаменных скал, образующие своеобразный мост высоко над пропостью, пройти по которому кажется очень пугающе и опасно.">
+          </li> -->
           <li class="benefits__item">
             <div class="benefits__item-header">
               <h3 class="benefits__caption">Небольшая площадь</h3>
@@ -148,6 +152,23 @@
       <p class="page-footer__copyright">Разработано</p>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>
