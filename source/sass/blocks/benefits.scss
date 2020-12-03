@@ -24,7 +24,6 @@
   padding: 0 10px;
 
   @media (min-width: $tablet-width) {
-    // font-size: 21px;
     max-width: 520px;
   }
 
@@ -105,6 +104,9 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+
     &--main {
       grid-column: 1 / span 3;
       display: grid;
@@ -135,81 +137,31 @@
   }
 }
 
-.benefits__item-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-
-  // &--main::after {
-  //   content: "";
-  //   width: 520px;
-  //   height: 260px;
-  //   background: url("https://via.placeholder.com/520x260") no-repeat;
-  //   background-color: $bg-grey;
-  //   background-size: cover;
-  //   background-position: center;
-  //   margin-top: 39px;
-
-  //   @include outline();
-  //   outline-color: rgb(0, 225, 255);
-  // }
-
-  // &--secondary::after {
-  //   content: "";
-  //   width: 520px;
-  //   height: 260px;
-  //   background: url("https://via.placeholder.com/520x260") no-repeat;
-  //   background-color: $bg-grey;
-  //   background-size: cover;
-  //   background-position: center;
-  //   margin-top: 35px;
-
-  //   @include outline();
-  //   outline-color: rgb(0, 225, 255);
-  // }
-}
-
 .benefits__caption {
   @include caption-style();
-
-  padding-top: 25px;
   width: 100%;
 
   &--main {
-    padding-top: 55px;
     color: $basic-white;
   }
 
   &--secondary {
-    padding-top: 39px;
     color: $basic-white;
   }
-
-  // @media (min-width: $tablet-width) {
-  // }
 }
 
 .benefits__number {
   @include paragraph-style();
 
   width: 100%;
-  padding: 22px 0 24px 0;
-
-  &--main,
-  &--secondary {
-    padding: 20px 0 25px 0;
-  }
 }
 
 .benefits__desc {
   @include paragraph-style();
 
-  padding: 0 32px 24px;
-
-
   &--main,
   &--secondary {
     display: flex;
     flex-direction: column;
-    padding-bottom: 35px;
   }
 }

@@ -5,16 +5,14 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__link">
-          <img class="page-header__logo-image" width="102" height="84" src="img/logotype-mobile.svg"
-            alt="City of Sedona">
-        </a>
+        <a href="index.html" class="page-header__link"></a>
         <button class="page-header__toggle" type="button">=
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -42,15 +40,7 @@
   <main class="page-main">
     <section class="intro">
       <h2 class="visually-hidden">Добо пожаловать на сайт Седона! Сейчас вы в разделе фото и видео галлереи.</h2>
-      <div class="intro__wrapper">
-        <img class="intro__headline" width="229" height="50" src="img/SEDONA.svg"
-          alt="Добро пожаловать на сайт Седона! Услуги поиска гостиниц в великолепном городке Седона, в штате Аризона.">
-        <svg class="intro__triangle" width="320" height="57" viewBox="0 0 320 57" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M-190.171 23.7L-440 0V57H-190.171H160.55L-190.171 0V23.7Z" fill="white"></path>
-          <path d="M511.271 23.7V0L160.55 57H511.271H761V0L511.271 23.7Z" fill="white"></path>
-        </svg>
-      </div>
+      <div class="intro__wrapper"></div>
     </section>
     <section class="photogallery">
       <div class="photogallery__wrapper">
@@ -60,46 +50,70 @@
         <ul class="photogallery__list">
           <li class="photogallery__item">
             <article class="photogallery__postcard postcard">
-              <img width="280" height="280" class="postcard__userphoto postcard__userphoto--photo-1"
-                src="https://via.placeholder.com/280x280"
+              <img class="postcard__userphoto postcard__userphoto--photo-1" src="https://via.placeholder.com/280x280"
                 alt="На фоне скалистых гор, едва проступающих в оранжево-золотистых лучах заходящего солнца, движущийся издалека автомобиль приближается по длинной асфальтовой дороге, вдоль которой пустынно растут невысокие кусты.">
-              <h3 class="postcard__title">Неродные просторы</h3>
-              <p class="postcard__username">Автор фото: Борис</p>
-              <button class="postcard__like-button" type="button"><span class="visually-hidden">&hearts;</span></button>
-              <p class="postcard__like-counter">1350</p>
+              <div class="postcard__bottom">
+                <div class="postcard__info">
+                  <h3 class="postcard__title">Неродные просторы</h3>
+                  <p class="postcard__username">Автор фото: Борис</p>
+                </div>
+                <div class="postcard__like-counter">
+                  <button class="postcard__like-button" type="button"><span
+                      class="visually-hidden">&hearts;</span></button>
+                  <p class="postcard__like-amount">1350</p>
+                </div>
+              </div>
             </article>
           </li>
           <li class="photogallery__item">
             <article class="photogallery__postcard postcard">
-              <img width="280" height="280" class="postcard__userphoto postcard__userphoto--photo-2"
-                src="https://via.placeholder.com/280x280"
+              <img class="postcard__userphoto postcard__userphoto--photo-2" src="https://via.placeholder.com/280x280"
                 alt="В режиме макросъемки, на фоне красных голых скал крупным планом изображён небычный, цветущий жёлтыми цветками, какутус.">
-              <h3 class="postcard__title">Местная растительность</h3>
-              <p class="postcard__username">Автор фото: Сергей</p>
-              <button class="postcard__like-button" type="button"><span class="visually-hidden">&hearts;</span></button>
-              <p class="postcard__like-counter">143</p>
+              <div class="postcard__bottom">
+                <div class="postcard__info">
+                  <h3 class="postcard__title">Местная растительность</h3>
+                  <p class="postcard__username">Автор фото: Сергей</p>
+                </div>
+                <div class="postcard__like-counter">
+                  <button class="postcard__like-button" type="button"><span
+                      class="visually-hidden">&hearts;</span></button>
+                  <p class="postcard__like-amount">143</p>
+                </div>
+              </div>
             </article>
           </li>
           <li class="photogallery__item">
             <article class="photogallery__postcard postcard">
-              <img width="280" height="280" class="postcard__userphoto postcard__userphoto--photo-3"
-                src="https://via.placeholder.com/280x280"
+              <img class="postcard__userphoto postcard__userphoto--photo-3" src="https://via.placeholder.com/280x280"
                 alt="Среди красных скалистых гор, заросших густым зелёным лесом, вьется серпантином асфальтовая дорога.">
-              <h3 class=" postcard__title">Дорога на Север</h3>
-              <p class="postcard__username">Автор фото: Петр</p>
-              <button class="postcard__like-button" type="button"><span class="visually-hidden">&hearts;</span></button>
-              <p class="postcard__like-counter">96</p>
+              <div class="postcard__bottom postcard__bottom--dark">
+                <div class="postcard__info">
+                  <h3 class=" postcard__title">Дорога на Север</h3>
+                  <p class="postcard__username">Автор фото: Петр</p>
+                </div>
+                <div class="postcard__like-counter">
+                  <button class="postcard__like-button" type="button"><span
+                      class="visually-hidden">&hearts;</span></button>
+                  <p class="postcard__like-amount">96</p>
+                </div>
+              </div>
             </article>
           </li>
           <li class="photogallery__item">
             <article class="photogallery__postcard postcard">
-              <img width="280" height="280" class="postcard__userphoto postcard__userphoto--photo-4"
-                src="https://via.placeholder.com/280x280"
+              <img class="postcard__userphoto postcard__userphoto--photo-4" src="https://via.placeholder.com/280x280"
                 alt="Тонкое и узское соединение двух краснокаменных скал, образующие своеобразный мост высоко над пропостью, пройти по которому кажется очень пугающе и опасно.">
-              <h3 class="postcard__title">Мост Дьявола</h3>
-              <p class="postcard__username">Автор фото: Антон</p>
-              <button class="postcard__like-button" type="button"><span class="visually-hidden">&hearts;</span></button>
-              <p class="postcard__like-counter">254</p>
+              <div class="postcard__bottom">
+                <div class="postcard__info">
+                  <h3 class="postcard__title">Мост Дьявола</h3>
+                  <p class="postcard__username">Автор фото: Антон</p>
+                </div>
+                <div class="postcard__like-counter">
+                  <button class="postcard__like-button" type="button"><span
+                      class="visually-hidden">&hearts;</span></button>
+                  <p class="postcard__like-amount">245</p>
+                </div>
+              </div>
             </article>
           </li>
         </ul>
@@ -112,7 +126,7 @@
           раз!</p>
         <div class="videogram__player player">
           <div class="player__screen">
-            <video width="320" height="201" class="player__screen-image" src="https://via.placeholder.com/320x201" poster="https://via.placeholder.com/320x201" alt="Движение по частично загруженной автодороге, пролегающей среди выских красных скал">
+            <video class="player__screen-image" src="https://via.placeholder.com/320x201">
             </video>
             <div class="player__volume">
               <div class="player__volume-scale"></div>

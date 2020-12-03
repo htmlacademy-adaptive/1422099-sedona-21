@@ -1,22 +1,46 @@
 .videogram__wrapper {
   margin: 0 auto;
-  width: 320px;
   border-top: 1px solid #e5e5e5;
   padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    @include container-tablet();
+
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop();
+
+    padding-bottom: 85px;
+  }
 }
 
 .videogram__title {
   @include caption-style();
 
   padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .videogram__subtitle {
   line-height: 24px;
   padding: 33px 22px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 490px;
+  }
 }
 
 .videogram__player {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }

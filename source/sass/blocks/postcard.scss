@@ -1,8 +1,61 @@
 .postcard {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 22px 20px 15px 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.postcard__userphoto {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    &--photo-1 {
+      height: 400px;
+    }
+  }
+}
+
+.postcard__bottom {
+  padding: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    background-color: #f2f2f2;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+
+    &--dark {
+      background-color: #eaeaea;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($basic-black, 0.5);
+    color: $basic-white;
+  }
+}
+
+.postcard__info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    justify-content: center;
+  }
 }
 
 .postcard__title {
@@ -10,13 +63,10 @@
   line-height: 24px;
   margin: 0;
   padding: 10px 0;
-}
 
-.postcard__like-counter {
-  font-weight: bold;
-  line-height: 24px;
-  margin: 0;
-  padding-left: 14px;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .postcard__username {
@@ -24,6 +74,26 @@
   text-transform: none;
   text-align: start;
   padding-bottom: 13px;
-  width: 100%;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.postcard__like-counter {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.postcard__like-amount {
+  display: flex;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 0;
+  padding-left: 14px;
 }
