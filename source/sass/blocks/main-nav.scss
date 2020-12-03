@@ -45,8 +45,20 @@
     box-shadow: none;
     background-color: $basic-white;
     width: 20%;
+
+    &:hover {
+      background-color: $basic-white;
+      color: $main-color;
+    }
+
+    &:active {
+      background-color: $basic-white;
+      color: rgba($basic-black, 0.3);
+    }
   }
 }
+
+// .main-nav__item--active
 
 .main-nav__list li:first-child {
   box-shadow: none;
@@ -92,6 +104,31 @@
     color: $basic-black;
     padding-top: 16px;
     padding-bottom: 14px;
+
+    &:hover {
+      background-color: $basic-white;
+      color: $main-color;
+    }
+
+    &:active {
+      background-color: $basic-white;
+      color: rgba($basic-black, 0.3);
+    }
+  }
+}
+
+.main-nav__item--active .main-nav__link {
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: rgba(#766357, 0.3);
+    }
   }
 }
 
