@@ -8,7 +8,7 @@
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
-    padding: 36px 59px;
+    padding: 36px 60px 36px 60px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -26,15 +26,23 @@
   @include caption-style();
 
   font-size: 21px;
-  margin-bottom: 35.5px;
-  margin-top: 28.5px;
+  margin-bottom: 32.5px;
+  margin-top: 39.5px;
+  margin-right: 1px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding-top: 2px;
   }
 }
 
 .page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__text {
   margin: 0;
   color: $basic-black;
   margin-top: 45px;
@@ -42,5 +50,25 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-left: 8px;
+  }
+}
+
+.page-footer__link svg {
+  margin-left: 12px;
+  transform: translateY(35%);
+
+  &:hover {
+    fill: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: none;
+    position: relative;
+    top: 5px;
   }
 }

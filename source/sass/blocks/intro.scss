@@ -114,6 +114,15 @@
       height: 349.97px;
       margin-top: 78px;
       margin-bottom: 90px;
+      position: relative;
+      bottom: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      &--index {
+        left: 1px;
+        bottom: 0;
+      }
     }
   }
 
