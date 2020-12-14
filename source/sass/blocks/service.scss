@@ -1,12 +1,14 @@
 .service__wrapper {
-  padding-top: 33px;
-  padding-bottom: 49px;
   display: flex;
   flex-direction: column;
+  padding: 33px 20px 49px;
 
   @media (min-width: $tablet-width) {
-    width: 453px;
-    margin: 0 auto;
+    padding: 56px 20px 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 20px 64px;
   }
 }
 
@@ -17,29 +19,33 @@
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 }
 
 .service__text {
   line-height: 24px;
-  margin-bottom: 27px;
-  padding: 0 15px;
+  margin: 21px 0 27px 0;
+  padding: 0 5px;
+
+  & br {
+    display: none;
+  }
 
 
   @media (min-width: $tablet-width) {
     padding: 0;
     margin: 0 auto;
-    margin-bottom: 37px;
+    margin-bottom: 39px;
     text-align: center;
-    white-space: pre;
-    text-indent: 2em;
-    position: relative;
-    left: -6%;
 
-    &::first-line {
-      text-align: center;
+    & br {
+      display: inline;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
   }
 }
 
@@ -47,7 +53,9 @@
   @include caption-style();
 
   margin: 0 auto;
-  padding: 14.5px 32px 17.5px 32px;
+  padding: 14.5px 5px 17.5px 5px;
+  width: 100%;
+  max-width: 458px;
   font-size: 21px;
   color: $basic-white;
   background-color: $main-color;
@@ -58,9 +66,14 @@
 
   &:active {
     background-color: $main-color--down;
+    color: rgba($basic-white, 0.3);
   }
 
   @media (min-width: $tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 0;
   }
 }

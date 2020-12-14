@@ -8,11 +8,24 @@
   display: flex;
   position: relative;
 
+  &--index {
+    background: url("../img/back-desktop-large.jpg");
+    background-color: #c5d4dc;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    position: relative;
+  }
+
   &::after {
     content: "";
-    min-width: 320px;
+    min-width: 100%;
     height: 57px;
     background: url("../img/intro-triangle.svg") no-repeat;
+    background-size: cover;
+    background-position: bottom;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -67,23 +80,30 @@
 }
 
 .intro__wrapper {
+
+  margin: 0 20px;
   margin-top: 52px;
   margin-bottom: 67px;
   width: 229px;
   height: 39px;
   background: url("../img/SEDONA.svg") no-repeat;
   background-size: cover;
+  background-position: bottom;
 
   &--index {
+
     width: 282px;
     height: 214px;
     margin-top: 90px;
     margin-bottom: 85px;
     background: url("../img/text-index.svg") no-repeat;
     background-size: cover;
+    background-position: bottom;
   }
 
   @media (min-width: $tablet-width) {
+    @include container-tablet();
+
     width: 456.9px;
     height: 77.6px;
     margin-top: 95px;
@@ -94,10 +114,21 @@
       height: 349.97px;
       margin-top: 78px;
       margin-bottom: 90px;
+      position: relative;
+      bottom: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      &--index {
+        left: 1px;
+        bottom: 0;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
+    @include container-desktop();
+
     width: 459.5px;
     height: 79.8px;
     margin-top: 101px;

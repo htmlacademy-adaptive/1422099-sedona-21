@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   background-color: $main-color;
+  min-height: 56px;
 
   &:hover {
     background-color: $main-color--hover;
@@ -45,22 +46,56 @@
     box-shadow: none;
     background-color: $basic-white;
     width: 20%;
+
+    &:hover {
+      background-color: $basic-white;
+      color: $main-color;
+    }
+
+    &:active {
+      background-color: $basic-white;
+      color: rgba($basic-black, 0.3);
+    }
   }
 }
 
 .main-nav__list li:first-child {
   box-shadow: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    bottom: 1px;
+  }
 }
 
 .main-nav__list li:nth-child(2) {
   @media (min-width: $tablet-width) {
     margin-right: 20%;
+    position: relative;
+    bottom: 1px;
+    right: 2px;
+  }
+}
+
+.main-nav__list li:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    padding-left: 8px;
+    position: relative;
+    bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 8px;
+    position: relative;
+    bottom: 1px;
+    right: 2px;
   }
 }
 
 .main-nav__list li:last-child {
   background: linear-gradient(to bottom, transparent 87%, rgba(0, 0, 0, 0.2) 100%);
   background-color: $main-color;
+  min-height: 55px;
 
   &:hover {
     background-color: $main-color--hover;
@@ -73,8 +108,12 @@
   @media (min-width: $tablet-width) {
     background: none;
     background-color: $basic-white;
+    position: relative;
+    left: 1px;
+    bottom: 1px;
   }
 }
+
 
 .main-nav__link {
   @include caption-style();
@@ -90,7 +129,150 @@
     font-size: 14px;
     line-height: 26px;
     color: $basic-black;
-    padding-top: 16px;
-    padding-bottom: 14px;
+    padding: 16px 5px 14px;
+
+    &:hover {
+      background-color: $basic-white;
+      color: $main-color;
+    }
+
+    &:active {
+      background-color: $basic-white;
+      color: rgba($basic-black, 0.3);
+    }
   }
+}
+
+.main-nav__item--active .main-nav__link {
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: rgba(#766357, 0.3);
+    }
+  }
+}
+
+.main-nav__toggle {
+  content: "";
+  width: 22.9px;
+  height: 22.9px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22.9px;
+  height: 4px;
+  background-color: $main-color;
+  box-shadow: 0 9px 0 0 $main-color,
+    0 19px 0 0 $main-color;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: rgba($main-color, 0.6);
+  box-shadow: 0 9px 0 0 rgba($main-color, 0.6),
+    0 19px 0 0 rgba($main-color, 0.6);
+  outline: none;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba($main-color, 0.3);
+  box-shadow: 0 9px 0 0 rgba($main-color, 0.3),
+    0 19px 0 0 rgba($main-color, 0.3);
+  outline: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+.main-nav--nojs .site-list__item--active a {
+  padding-right: 21px;
+  padding-left: 21px;
+  text-align: left;
+}
+
+.main-nav--nojs .user-list__item {
+  display: block;
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -3px;
+    width: 28px;
+    height: 4px;
+    background-color: $basic-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgba($basic-white, 0.6);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba($basic-white, 0.3);
+    outline: none;
+  }
+}
+
+button:active,
+button:focus {
+  outline: 1px solid rgba(83, 51, 2, 0.2);
+  outline-offset: 3px;
 }
