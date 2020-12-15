@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 55px;
+    margin-top: 56px;
   }
 }
 
@@ -27,12 +27,14 @@
   padding: 0 27px 0 24px;
 
   @media (min-width: $tablet-width) {
+    font-size: 21px;
     max-width: 520px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 30px;
     padding-top: 1px;
+    font-size: 21px;
   }
 }
 
@@ -216,6 +218,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    font-size: 21px;
     padding: 0 50px;
     margin: 0;
 
@@ -233,6 +236,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    font-size: 21px;
     padding: 0 70px;
     margin: 0;
 
@@ -241,7 +245,7 @@
     }
 
     &--main {
-      padding: 10px 40px 12px;
+      padding: 3px 40px 14px;
       margin: 0;
     }
 

@@ -7,6 +7,7 @@
   justify-content: center;
   display: flex;
   position: relative;
+  // right: 1px;
 
   &--index {
     background: url("../img/back-desktop-large.jpg");
@@ -17,6 +18,7 @@
     justify-content: center;
     display: flex;
     position: relative;
+    right: 0;
   }
 
   &::after {
@@ -89,9 +91,10 @@
   background: url("../img/SEDONA.svg") no-repeat;
   background-size: cover;
   background-position: bottom;
+  position: relative;
+  left: 2px;
 
   &--index {
-
     width: 282px;
     height: 214px;
     margin-top: 90px;
@@ -116,29 +119,32 @@
       margin-bottom: 90px;
       position: relative;
       bottom: 1px;
-    }
-
-    @media (min-width: $desktop-width) {
-      &--index {
-        left: 1px;
-        bottom: 0;
-      }
+      left: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
     @include container-desktop();
 
+    background: url("../img/text-sedona-desktop.svg") no-repeat;
     width: 459.5px;
     height: 79.8px;
     margin-top: 101px;
     margin-bottom: 120.2px;
+    position: relative;
+    top: 0;
+    left: 0;
 
     &--index {
+      background: url("../img/text-index.svg") no-repeat;
+      background-size: cover;
+      background-position: bottom;
       width: 459.5px;
       height: 349.97px;
       margin-top: 77px;
       margin-bottom: 90px;
+      left: 0;
+      bottom: 0;
     }
   }
 }

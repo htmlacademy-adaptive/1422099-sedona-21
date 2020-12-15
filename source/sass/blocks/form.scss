@@ -20,23 +20,59 @@
 
   &--radioButton {
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & li:last-child {
+      margin-bottom: 7px;
+    }
   }
 
   &--checkbox {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 17px;
+
+    & li:last-child {
+      margin-bottom: 9px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     &--checkbox {
-      margin-left: 95px;
+      margin-left: 98px;
+      margin-right: 35px;
+      margin-top: 18px;
+      margin-bottom: 2px;
+
+      & li:last-child {
+        margin-bottom: 31px;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
+    &--radioButton {
+      justify-content: flex-start;
+      margin-left: 4px;
+      margin-top: 34px;
+    }
+
+    &--user-contact {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
     &--checkbox {
-      margin-left: 0;
+      margin: 17px 0 0 0;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      & li:last-child {
+        margin-right: 4px;
+      }
     }
   }
 }
@@ -44,11 +80,12 @@
 .form__item {
   display: flex;
   align-items: baseline;
-  padding: 10px 0;
+  position: relative;
 
   &--username {
     width: 100%;
     flex-grow: 2;
+    padding: 9px 0 11px;
   }
 
   &--user-contact {
@@ -56,42 +93,98 @@
     flex-wrap: wrap;
   }
 
+  &--tel {
+    &::after {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background: url("../img/phone.svg") no-repeat;
+      background-color: #e6e6e6;
+      background-position: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--email {
+    margin-bottom: 13px;
+
+    &::after {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background: url("../img/mail.svg") no-repeat;
+      background-color: #e6e6e6;
+      background-position: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
   &--checkbox {
-    width: 100%;
+    width: 210px;
     flex-grow: 1;
+    margin-bottom: 24px;
   }
 
   &--radioButton {
-    width: 100%;
-    justify-content: center;
+    width: 280px;
   }
 
   @media (min-width: $tablet-width) {
     &--radioButton {
+      width: 324px;
       justify-content: flex-start;
     }
 
     &--checkbox {
       width: 50%;
+      margin-bottom: 31px;
+    }
+
+    &--user-contact {
+      margin-bottom: 18px;
     }
   }
 
   @media (min-width: $desktop-width) {
     &--checkbox {
       width: auto;
+      flex-grow: 0;
+    }
+
+    &--user-contact {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    &--tel {
+      &::after {
+        right: 79px;
+      }
     }
   }
 }
 
 .form__label {
   &--username {
-    padding: 0 12px 0 10px;
+    padding: 0 14px 0 0;
+  }
+
+  &--patronyme {
+    padding: 0 17px 0 0;
   }
 
   &--user-contact {
     text-align: start;
-    padding: 8px 21px;
+    padding: 6px 21px 8px 22px;
     width: 100%;
+  }
+
+  &--email {
+    padding: 13px 23px 6px 21px;
   }
 
   &--checkbox {
@@ -109,10 +202,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(10%);
     z-index: 1;
-    width: 46px;
-    height: 46px;
+    width: 54px;
+    height: 54px;
     background-color: $bg-input;
     border: 5px solid $bg-input;
     content: "";
@@ -126,8 +218,7 @@
     text-transform: none;
     position: relative;
     width: 100%;
-    padding: 15px 0;
-    padding-left: 78px;
+    padding: 26px 11px 18px 78px;
     display: flex;
     justify-content: flex-start;
   }
@@ -136,10 +227,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(10%);
+    transform: translateY(20%);
     z-index: 1;
-    width: 46px;
-    height: 46px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background-color: $bg-input;
     border: 5px solid $bg-input;
@@ -149,12 +240,27 @@
   }
 
   @media (min-width: $tablet-width) {
-    &--radiobutton {
-      padding-left: 75px;
+    &--radioButton {
+      padding-left: 76px;
+      padding-top: 28px;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    &--radioButton::before {
+      transform: translateY(22%);
     }
 
     &--checkbox {
-      padding: 15px 0 15px 80px;
+      padding: 14px 0 16px 79px;
+    }
+
+    &--tel {
+      padding: 6px 21px 9px 23px;
+    }
+
+    &--email {
+      padding: 6px 22px;
     }
   }
 
@@ -165,6 +271,26 @@
 
     &--checkbox {
       padding: 15px 0 15px 81px;
+
+      &::before {
+        left: 3px;
+      }
+    }
+
+    &--tel {
+      padding-left: 0;
+      margin-right: 10px;
+      overflow: hidden;
+      width: min-content;
+    }
+
+    &--span {
+      display: none;
+    }
+
+    &--email {
+      padding: 0 10px 0 0;
+      width: 258px;
     }
   }
 }
@@ -173,16 +299,172 @@
   @include caption-style();
 
   padding: 10px 0;
+
+
+  &--checkbox {
+    padding: 5px 5px 4px 3px;
+  }
+
+  &--textarea {
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    text-align: start;
+    margin-bottom: 34px;
+
+    &--user-contact {
+      text-align: center;
+      position: relative;
+      margin-bottom: 3px;
+      margin-right: 2px;
+
+      &::before {
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 43%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 43%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--checkbox {
+      text-align: center;
+      margin: 0 auto;
+      width: 423px;
+      padding-left: 5px;
+      padding-bottom: 27px;
+    }
+
+    &--textarea {
+      text-align: center;
+      position: relative;
+      margin-right: 2px;
+      margin-bottom: 40px;
+
+      &::before {
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 41%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        width: 123px;
+        height: 1px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 41%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--radioButton {
+      text-align: center;
+      margin: 0 58px 0 10px;
+    }
+
+    &--checkbox {
+      &::before {
+        content: "";
+        width: 280px;
+        height: 0.5px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        width: 280px;
+        height: 0.5px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--user-contact {
+      margin-bottom: 60px;
+
+      &::before {
+        content: "";
+        width: 280px;
+        height: 0.5px;
+        top: 41%;
+      }
+
+      &::after {
+        width: 280px;
+        height: 0.5px;
+        top: 41%;
+      }
+    }
+
+    &--textarea {
+      margin-bottom: 40px;
+
+      &::before {
+        content: "";
+        width: 280px;
+      }
+
+      &::after {
+        content: "";
+        width: 280px;
+      }
+    }
+  }
 }
 
 .form__input {
   @include caption-style();
 
   text-transform: none;
+  font-family: inherit;
   background-color: $bg-input;
   border: none;
-  padding: 18px 22px 14px 22px;
+  padding: 18px 22px 14px;
   width: inherit;
+
+  &:hover {
+    background-color: $bg-input-hover;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $basic-white;
+    outline: 4px solid $bg-input-hover;
+    outline-offset: -4px;
+  }
 
   &--username {
     flex-grow: 1;
@@ -200,11 +482,9 @@
   }
 
   &--checkbox:checked ~ label::before {
-    //временная стилизация
-    width: 35px;
-    height: 35px;
-    transform: translate(5px, 10px);
-    background-color: $main-color;
+    background: url("../img/tick.svg") no-repeat;
+    background-position: center;
+    background-color: $bg-input;
   }
 
   &--checkbox:hover ~ label::before {
@@ -213,6 +493,8 @@
   }
 
   &--checkbox:active ~ label::before {
+    background: url("../img/tick.svg") no-repeat;
+    background-position: center;
     background-color: $bg-input-down;
     border: 5px solid $bg-input-down;
   }
@@ -222,36 +504,79 @@
   }
 
   &--radioButton:checked ~ label::before {
-    //временная стилизация
-    width: 46px;
-    height: 46px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    // transform: translate(5px, 10px);
     box-shadow: inset 20px 30px $text-color;
     background-color: $bg-input;
-    border: 12px solid $bg-input;
+    border: 17px solid $bg-input;
   }
 
   &--radioButton:hover ~ label::before {
     background-color: $bg-input-hover;
-    border: 12px solid $bg-input-hover;
+    border: 17px solid $bg-input-hover;
   }
 
   &--radioButton:active ~ label::before {
     box-shadow: inset 20px 30px rgba($text-color, 0.3);
-    border: 12px solid $bg-input-down;
+    border: 17px solid $bg-input-down;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--username {
+      font-size: 18px;
+    }
+
+    &--email {
+      padding: 18px 22px 14px 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      &--email {
+        padding: 19px 22px 14px 22px;
+      }
+
+      &--tel {
+        width: 300px;
+        padding: 19px 22px 14px 7px;
+      }
+    }
   }
 }
 
 .form__textarea {
-  font: inherit;
-  background: $bg-input;
+  @include caption-style();
+
+  font-family: inherit;
+  background-color: $bg-input;
   border: none;
   resize: none;
-  padding: 13px 21px;
+
+  padding: 2px 21px 2px 20px;
   width: 100%;
+
+  &:hover {
+    background-color: $bg-input-hover;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $basic-white;
+    outline: 4px solid $bg-input-hover;
+    outline-offset: -4px;
+  }
 
   &::placeholder {
     @include caption-style();
+
+    padding-top: 13px;
+    padding-right: 5px;
+    font-family: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 21px 0 22px;
+    position: relative;
   }
 }
