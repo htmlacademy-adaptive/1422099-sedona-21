@@ -1,6 +1,7 @@
 .page-footer__wrapper {
   @include container-mobile();
 
+  padding-right: 21px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,8 +28,8 @@
 
   font-size: 21px;
   margin-bottom: 32.5px;
-  margin-top: 39.5px;
-  margin-right: 1px;
+  margin-top: 40px;
+  margin-right: 2px;
 
   @media (min-width: $tablet-width) {
     margin: 0;

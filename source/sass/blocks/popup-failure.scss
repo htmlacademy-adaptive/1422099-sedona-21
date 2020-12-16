@@ -1,0 +1,86 @@
+.popup-failure {
+  display: none;
+  position: absolute;
+  bottom: 130px;
+  background-color: $basic-white;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 12px -8px $basic-black;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 400px;
+    bottom: 223px;
+  }
+
+  @media (min-width: $tablet-width) {
+    bottom: 111px;
+  }
+}
+
+.popup-failure__wrapper {
+  width: 100%;
+  padding: 20px 20px 35px 20px;
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 49px;
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 37px;
+  }
+}
+
+.popup-failure__caption {
+  @include caption-style();
+
+  text-align: center;
+  padding: 20px 20px 3px 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 60px 0;
+  }
+}
+
+.popup-failure__text {
+  line-height: 24px;
+  text-align: center;
+  padding: 23px 22px 23px 21px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 22px 22px;
+  }
+}
+
+.popup-failure__button {
+  @include caption-style();
+  @include button-style();
+
+  width: 64.29%;
+  max-width: 272px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 75%;
+    font-size: 21px;
+    line-height: 26px;
+    padding-right: 2px;
+    margin-top: 16px;
+  }
+}

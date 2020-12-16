@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 95px;
+    margin-top: 97px;
   }
 }
 
@@ -17,6 +17,8 @@
 
   @media (min-width: $tablet-width) {
     @include container-tablet();
+
+    max-width: none;
     display: flex;
     flex-wrap: wrap;
   }
@@ -33,62 +35,128 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
+    width: 768px;
     font-size: 30px;
     margin: 0 auto;
+    padding-top: 15px;
+    padding-right: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
 .review__subtitle {
   line-height: 24px;
-  padding: 18px 0 16px;
+  padding: 11px 0 16px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 435px;
+    width: 437px;
+    padding-top: 14px;
+    padding-right: 2px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
 .review__item {
   border: none;
-  border-top: 1px solid #e5e5e5;
-  padding: 10px 0 15px 0;
+  padding: 11px 0 15px 0;
   margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    min-width: 320px;
+    width: 100%;
+    position: absolute;
+    background-color: #e5e5e5;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
 
+    &::before {
+      display: none;
+    }
+
     &--radioButton {
       order: -1;
       width: 50%;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 300px;
+        background-color: #dbdbdb;
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+      }
     }
 
     &--username {
       width: 50%;
+      padding-left: 9%;
+    }
+
+    &--user-contact {
+      margin-top: 20px;
+    }
+
+    &--checkbox {
+      margin-top: 3px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--username {
+      padding-left: 8.35%;
+    }
+
+    &--radioButton {
+      &::after {
+        left: 100%;
+      }
+    }
+
+    &--user-contact {
+      margin-top: 18px;
     }
   }
 }
 
 .review__button {
   @include caption-style();
+  @include button-style();
 
-  border: none;
-  text-transform: uppercase;
-  color: $basic-white;
   font-size: 21px;
-  padding: 18.5px 0 13.5px;
-  background-color: $main-color;
+  padding: 18.5px 3px 13.5px 0;
   width: 100%;
-
-  &:hover {
-    background-color: $main-color--hover;
-  }
-
-  &:active {
-    background-color: $main-color--down;
-  }
+  max-width: 480px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    padding-right: 13px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 11px;
+    padding-left: 11px;
   }
 }
 
@@ -99,15 +167,22 @@
     line-height: 26px;
     display: block;
     text-align: end;
+    padding: 5px 1px 0;
+    flex-grow: 1;
   }
 }
 
 .review__bottom {
-  margin-top: 43px;
-  margin-bottom: 61px;
+  margin-top: 28px;
+  margin-bottom: 37px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 34px;
+    margin-bottom: 60px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 66px;

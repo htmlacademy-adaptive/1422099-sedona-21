@@ -73,6 +73,9 @@
     margin-right: 20%;
     position: relative;
     bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
     right: 2px;
   }
 }
@@ -109,7 +112,7 @@
     background: none;
     background-color: $basic-white;
     position: relative;
-    left: 1px;
+    // left: 1px;
     bottom: 1px;
   }
 }

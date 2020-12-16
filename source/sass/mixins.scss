@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-  max-width: 320px;
+  // max-width: 320px;
   // background-color: rgba(magenta, 0.15);
   // outline: 4px solid lime;
   // outline-offset: -4px;
@@ -66,8 +66,8 @@
   line-height: 26px;
   color: $basic-black;
 
-  @media (min-width: $tablet-width) {
-    font-size: 21px;
+  @media (min-width: $desktop-width) {
+    // font-size: 21px;
   }
 }
 
@@ -75,4 +75,21 @@
   padding: 0;
   margin: 0;
   line-height: 21px;
+}
+
+@mixin button-style() {
+  border: none;
+  color: $basic-white;
+  text-transform: inherit;
+  font-family: inherit;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $main-color--hover;
+  }
+
+  &:active {
+    background-color: $main-color--down;
+    color: rgba($basic-white, 0.3);
+  }
 }
