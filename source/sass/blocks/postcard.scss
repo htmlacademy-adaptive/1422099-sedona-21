@@ -2,33 +2,94 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  flex-direction: column;
+  padding: 0 20px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    flex-direction: column;
-    justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
+.postcard__link {
+  overflow: hidden;
+  display: contents;
+}
+
 .postcard__userphoto {
+  width: 100%;
+  height: 280px;
+  margin-top: 23px;
+
+  &--photo-1 {
+    background: url("../img/photo-1-Nierodnye_prostory-Boris.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--photo-2 {
+    background: url("../img/photo-2-Mestnaya_rastitelnost-Sergei.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--photo-3 {
+    background: url("../img/photo-3-Doroga_na_sever-Petr.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 24px;
+  }
+
+  &--photo-4 {
+    background: url("../img/photo-4-Most_diavola-Anton.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin: 0;
+    height: 267px;
 
     &--photo-1 {
       height: 400px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .postcard__bottom {
-  padding: 0 0 20px 0;
+  padding: 0 0 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0 20px;
+    // padding: 0 20px;
     background-color: #f2f2f2;
     width: 100%;
     min-height: 80px;
     display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1px;
 
     &--dark {
       background-color: #eaeaea;
@@ -41,6 +102,8 @@
     left: 0;
     background-color: rgba($basic-black, 0.5);
     color: $basic-white;
+    z-index: 1;
+    padding: 0;
   }
 }
 
@@ -51,21 +114,25 @@
   align-items: flex-start;
   margin: 0;
   width: 100%;
+  max-width: 279px;
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     justify-content: center;
+    padding: 0 20px;
   }
 }
 
 .postcard__title {
   font-weight: bold;
   line-height: 24px;
+  font-size: inherit;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0 1px;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 0 1px 0 0;
+    margin-bottom: 1px;
   }
 }
 
@@ -77,16 +144,28 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 0 1px 0 0;
   }
 }
 
 .postcard__like-counter {
   display: flex;
+  align-items: center;
+  position: relative;
+
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
     align-items: center;
+    width: 111px;
+    margin-top: 27.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    align-items: center;
+    width: 80px;
+    margin-top: 27.5px;
   }
 }
 
@@ -96,4 +175,48 @@
   line-height: 24px;
   margin: 0;
   padding-left: 14px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+
+    &--first {
+      left: 44px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+  }
+}
+
+.postcard__like-button {
+  border: none;
+  background-color: transparent;
+  width: 23px;
+  height: 21px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    bottom: 3px;
+    right: 62px;
+    position: absolute;
+  }
+}
+
+.postcard__like-button svg {
+  fill: black;
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    fill: $basic-white;
+    opacity: 1;
+  }
 }

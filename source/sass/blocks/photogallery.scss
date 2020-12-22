@@ -1,41 +1,48 @@
 .photogallery__wrapper {
-  @include container-mobile();
-
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 32px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
-    margin-top: 58px;
+    margin-top: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    @include container-desktop();
-
-    margin-top: 95px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
+    margin: 100px 0 0 0;
   }
 }
 
 .photogallery__title {
   @include caption-style();
 
+  padding-left: 2px;
+
   @media (min-width: $tablet-width) {
     font-size: 30px;
+    padding-left: 0;
   }
 }
 
 .photogallery__subtitle {
   line-height: 24px;
   margin: 0;
-  margin-top: 37px;
+  margin-top: 28px;
+
+  margin-bottom: 31px;
+  padding: 0 20px 0 22px;
 
   @media (min-width: $tablet-width) {
-    width: 430px;
+    width: 470px;
     margin: 0 auto;
-    margin-top: 37px;
+    margin-top: 33px;
+    padding-right: 22px;
   }
 }
 
@@ -43,22 +50,19 @@
   @include list-reset();
 
   margin: 0;
-  margin-top: 50px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 87px;
+    margin-top: 78px;
     display: flex;
     flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 89px;
+    margin-top: 79px;
   }
 }
 
 .photogallery__item {
-  border-top: 1px solid #e5e5e5;
-
   @media (min-width: $tablet-width) {
     border: none;
     width: 50%;

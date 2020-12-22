@@ -1,0 +1,46 @@
+.tools {
+  &__replay {
+    flex-grow: 1;
+    text-align: start;
+    margin-left: 7%;
+  }
+
+  &__fullscreen {
+    margin-right: 6%;
+    margin-left: 7%;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__replay {
+      flex-grow: 1;
+      text-align: start;
+      margin-left: 4.7%;
+    }
+
+    &__fullscreen {
+      margin-right: 5.6%;
+      margin-left: 2.9%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__replay {
+      flex-grow: 1;
+      text-align: start;
+      margin-left: 3.4%;
+    }
+
+    &__fullscreen {
+      margin-right: 4.6%;
+      margin-left: 2.4%;
+    }
+  }
+}
+
+.tools__icon {
+  fill: #5c6870;
+
+  @media (min-width: $tablet-width) {
+    fill: $basic-white;
+  }
+}
