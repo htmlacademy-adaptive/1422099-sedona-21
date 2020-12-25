@@ -86,9 +86,9 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 67.7%;
-    left: 45%;
+    left: 45.3%;
 
     &::after {
       left: 21%;
