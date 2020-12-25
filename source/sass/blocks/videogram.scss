@@ -28,7 +28,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 31px;
+    margin-top: 29px;
+    margin-bottom: 33px;
   }
 }
 
@@ -52,6 +53,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 78px;
+    white-space: pre-wrap;
   }
 }
 

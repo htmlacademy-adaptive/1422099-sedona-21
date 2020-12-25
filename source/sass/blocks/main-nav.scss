@@ -112,7 +112,15 @@
     background: none;
     background-color: $basic-white;
     position: relative;
-    // left: 1px;
+    left: 1px;
+    bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: none;
+    background-color: $basic-white;
+    position: relative;
+    left: 0;
     bottom: 0;
   }
 }
