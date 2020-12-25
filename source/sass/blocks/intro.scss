@@ -7,7 +7,6 @@
   justify-content: center;
   display: flex;
   position: relative;
-  // right: 1px;
 
   &--index {
     background: url("../img/back-desktop-large.jpg");
@@ -82,7 +81,6 @@
 }
 
 .intro__wrapper {
-
   margin: 0 20px;
   margin-top: 52px;
   margin-bottom: 67px;
@@ -92,7 +90,6 @@
   background-size: cover;
   background-position: bottom;
   position: relative;
-  left: 2px;
 
   &--index {
     width: 282px;
@@ -111,6 +108,7 @@
     height: 77.6px;
     margin-top: 95px;
     margin-bottom: 117.4px;
+    left: 2px;
 
     &--index {
       width: 461px;

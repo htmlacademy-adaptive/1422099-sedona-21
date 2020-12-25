@@ -64,7 +64,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    bottom: 1px;
+    bottom: 0;
   }
 }
 
@@ -90,7 +90,7 @@
   @media (min-width: $desktop-width) {
     padding-left: 8px;
     position: relative;
-    bottom: 1px;
+    bottom: 0;
     right: 2px;
   }
 }
@@ -112,8 +112,16 @@
     background: none;
     background-color: $basic-white;
     position: relative;
-    // left: 1px;
+    left: 1px;
     bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: none;
+    background-color: $basic-white;
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
 }
 

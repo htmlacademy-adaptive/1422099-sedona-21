@@ -21,24 +21,27 @@
 .player__screen-image {
   width: 100%;
   height: 201px;
-  background: url("https://via.placeholder.com/320x201");
+  background: url("../img/video-desktop.jpg") no-repeat;
+  background-size: cover;
   background-position: center;
 
 
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 500px;
-    background: url("https://via.placeholder.com/648x500") no-repeat;
+    background: url("../img/video-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    background: url("https://via.placeholder.com/800x500") no-repeat;
+    background: url("../img/video-desktop.jpg") no-repeat;
   }
 }
 
 .player__volume {
-  width: 280px;
+  width: 88%;
   height: 45px;
   background-color: rgba($basic-black, 0.6);
   position: absolute;
@@ -49,11 +52,12 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     margin: 0 auto;
+    height: 93px;
   }
 }
 
 .player__volume-scale {
-  width: 235px;
+  width: 85%;
   height: 3px;
   background-color: rgba($basic-white, 0.2);
   position: absolute;
@@ -69,18 +73,48 @@
     background-color: $basic-white;
     position: absolute;
     top: 0;
-    left: 17%;
-    transform: translateY(-35%);
+    left: 15%;
+    transform: translateY(-33%);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 59.7%;
+    left: 44%;
+
+    &::after {
+      left: 30%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 67.7%;
+    left: 45.3%;
+
+    &::after {
+      left: 21%;
+    }
   }
 }
 
 .player__tools {
-  width: 280px;
+  width: 88%;
   margin: 0 auto;
   height: 66px;
   background-color: #f2f2f2;
+  display: flex;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 93px;
+    z-index: 3;
+    background-color: transparent;
   }
+}
+
+.player__tools button {
+  border: none;
+  background-color: transparent;
 }
