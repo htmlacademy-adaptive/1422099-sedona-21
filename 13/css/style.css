@@ -165,7 +165,7 @@ img {
   @media (min-width: 768px) {
     .main-nav__list li:first-child {
       position: relative;
-      bottom: 1px; } }
+      bottom: 0; } }
 
 @media (min-width: 768px) {
   .main-nav__list li:nth-child(2) {
@@ -187,7 +187,7 @@ img {
   .main-nav__list li:nth-child(3) {
     padding-left: 8px;
     position: relative;
-    bottom: 1px;
+    bottom: 0;
     right: 2px; } }
 
 .main-nav__list li:last-child {
@@ -203,7 +203,15 @@ img {
       background: none;
       background-color: #ffffff;
       position: relative;
+      left: 1px;
       bottom: 1px; } }
+  @media (min-width: 1200px) {
+    .main-nav__list li:last-child {
+      background: none;
+      background-color: #ffffff;
+      position: relative;
+      left: 0;
+      bottom: 0; } }
 
 .main-nav__link {
   padding: 0;
@@ -1026,7 +1034,7 @@ button:focus {
 .page-footer__text {
   margin: 0;
   color: #000000;
-  margin-top: 45px;
+  margin-top: 43px;
   margin-bottom: 26px; }
   @media (min-width: 768px) {
     .page-footer__text {
@@ -1767,6 +1775,9 @@ button:focus {
       margin: 0 auto;
       margin-top: 33px;
       padding-right: 22px; } }
+  @media (min-width: 1200px) {
+    .photogallery__subtitle {
+      margin-top: 34px; } }
 
 .photogallery__list {
   margin: 0;
@@ -1780,7 +1791,7 @@ button:focus {
       flex-wrap: wrap; } }
   @media (min-width: 1200px) {
     .photogallery__list {
-      margin-top: 79px; } }
+      margin-top: 80px; } }
 
 @media (min-width: 768px) {
   .photogallery__item {
@@ -1824,7 +1835,8 @@ button:focus {
 .postcard__userphoto {
   width: 100%;
   height: 280px;
-  margin-top: 23px; }
+  margin-top: 23px;
+  border: none; }
   .postcard__userphoto--photo-1 {
     background: url("../img/photo-1-Nierodnye_prostory-Boris.jpg") no-repeat;
     background-position: center;
@@ -1903,6 +1915,10 @@ button:focus {
     .postcard__title {
       padding: 0 1px 0 0;
       margin-bottom: 1px; } }
+  @media (min-width: 1200px) {
+    .postcard__title {
+      padding: 0 1px;
+      margin-bottom: 1px; } }
 
 .postcard__username {
   line-height: 24px;
@@ -1913,6 +1929,9 @@ button:focus {
   @media (min-width: 768px) {
     .postcard__username {
       padding: 0 1px 0 0; } }
+  @media (min-width: 1200px) {
+    .postcard__username {
+      padding: 0 1px; } }
 
 .postcard__like-counter {
   display: flex;
@@ -1961,7 +1980,7 @@ button:focus {
   bottom: 5px; }
   @media (min-width: 768px) {
     .postcard__like-button {
-      bottom: 3px;
+      bottom: 5px;
       right: 62px;
       position: absolute; } }
 
@@ -2008,7 +2027,8 @@ button:focus {
       margin-bottom: 32px; } }
   @media (min-width: 1200px) {
     .videogram__title {
-      margin-top: 31px; } }
+      margin-top: 29px;
+      margin-bottom: 33px; } }
 
 .videogram__subtitle {
   font-size: 14px;
@@ -2026,7 +2046,8 @@ button:focus {
         display: none; } }
   @media (min-width: 1200px) {
     .videogram__subtitle {
-      margin-bottom: 78px; } }
+      margin-bottom: 78px;
+      white-space: pre-wrap; } }
 
 .videogram__player {
   position: relative;
@@ -2107,10 +2128,10 @@ button:focus {
       left: 44%; }
       .player__volume-scale::after {
         left: 30%; } }
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .player__volume-scale {
       width: 67.7%;
-      left: 45%; }
+      left: 45.3%; }
       .player__volume-scale::after {
         left: 21%; } }
 
@@ -2135,31 +2156,42 @@ button:focus {
   background-color: transparent; }
 
 .tools__replay {
-  flex-grow: 1;
   text-align: start;
-  margin-left: 7%; }
+  margin-right: auto;
+  width: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .tools__fullscreen {
-  margin-right: 6%;
-  margin-left: 7%; }
+  width: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.tools__cc {
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 @media (min-width: 768px) {
   .tools__replay {
-    flex-grow: 1;
-    text-align: start;
-    margin-left: 4.7%; }
+    width: 88px; }
   .tools__fullscreen {
-    margin-right: 5.6%;
-    margin-left: 2.9%; } }
+    width: 85px;
+    padding: 0 27px 0 7px; }
+  .tools__cc {
+    width: 48px; } }
 
 @media (min-width: 1200px) {
   .tools__replay {
-    flex-grow: 1;
-    text-align: start;
-    margin-left: 3.4%; }
+    width: 85px; }
   .tools__fullscreen {
-    margin-right: 4.6%;
-    margin-left: 2.4%; } }
+    width: 85px;
+    padding: 0 27px 0 7px; }
+  .tools__cc {
+    width: 48px; } }
 
 .tools__icon {
   fill: #5c6870; }
