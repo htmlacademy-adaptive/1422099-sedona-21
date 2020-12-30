@@ -189,7 +189,7 @@ img {
       background: none;
       background-color: #ffffff;
       position: relative;
-      left: 1px;
+      left: 0;
       bottom: 1px; } }
   @media (min-width: 1200px) {
     .main-nav__list li:last-child {
@@ -2214,10 +2214,11 @@ button:focus {
   margin: 0 auto; }
   @media (min-width: 768px) {
     .map__wrapper {
-      min-width: 768px;
+      width: 100%;
       background: url("../img/map-desktop.png") no-repeat;
       background-position: center bottom;
-      background-size: cover; } }
+      background-size: cover;
+      overflow-x: hidden; } }
   @media (min-width: 1200px) {
     .map__wrapper {
       min-width: 1200px;
