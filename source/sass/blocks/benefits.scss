@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 56px;
+    margin-top: 54px;
   }
 }
 
@@ -35,6 +35,7 @@
     padding-right: 30px;
     padding-top: 1px;
     font-size: 21px;
+    white-space: pre;
   }
 }
 
@@ -138,15 +139,21 @@
       grid-template-rows: 256px 1fr;
       padding: 0;
       margin: 0;
+      align-self: center;
     }
 
     &--secondary {
       grid-column: 1 / span 3;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows: 256px;
       padding-top: 0;
+      align-self: center;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
   }
 }
 
@@ -175,6 +182,9 @@
 
     &--secondary {
       order: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
     }
   }
 
@@ -238,22 +248,24 @@
   @media (min-width: $desktop-width) {
     font-size: 21px;
     padding: 0 70px;
-    margin: 0;
+    margin: 43px 0 13px 0;
 
     & br {
       display: inline;
     }
 
     &--main {
-      padding: 3px 40px 14px;
-      margin: 0;
+      padding: 0 40px;
+      margin: 48px 0 12px 0;
     }
 
     &--secondary {
-      padding: 10px 54px 13px;
-      margin: 0;
-      position: relative;
-      bottom: 2px;
+      padding: 0 54px;
+      margin: 54px 0 10px 0;
+    }
+
+    &--4 {
+      margin: 42px 0 13px 0;
     }
   }
 }
@@ -285,21 +297,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-    padding: 10px 0 8px;
+    margin: 0;
+    padding: 0;
 
     &--main {
-      margin: 0 0 6px;
       padding: 0;
     }
 
     &--secondary {
       margin-bottom: 17px;
       padding: 0;
-    }
-
-    &--padding {
-      padding: 12px 0 13px;
     }
   }
 }
@@ -324,6 +331,10 @@
     width: inherit;
   }
 
+  &--4 {
+    white-space: pre;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 54px;
 
@@ -339,75 +350,83 @@
       width: inherit;
       padding: 6px 36px;
     }
+
+    &--4 {
+      white-space: inherit;
+      padding: 0 58px 0 54px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 295px;
-    padding: 17px 15px 20px 12px;
+    padding: 0 15px 0 13px;
+    margin: 22px 0 0 0;
 
     &--main {
-      margin-top: 2px;
+      margin-top: 24px;
       margin-bottom: 0;
-      padding: 15px 5px;
+      padding: 0 5px;
       width: inherit;
     }
 
     &--secondary {
+      margin-top: 6px;
       margin-bottom: 0;
+      padding: 0 31px;
       width: inherit;
-      padding: 6px 36px;
+    }
+
+    &--4 {
+      margin: 23px 0 0 0;
     }
   }
 }
 
 .benefits__desc--large {
   @media (min-width: $tablet-width) {
-    padding: 9px 40px 19px;
+    padding: 9px 40px 21px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 14px 1px 20px 0;
+    padding: 0;
   }
 }
 
-
 .benefits__image {
-  margin: 0 auto;
   width: 100%;
-  height: 260px;
-
+  height: auto;
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    height: 256px;
+    height: auto;
   }
 }
 
-.benefits__item--main .benefits__image {
-  background: url("../img/photo-city@1x-tablet.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+// .benefits__item--main .benefits__image {
+//   background: url("../img/photo-city@1x-tablet.jpg") no-repeat;
+//   background-size: cover;
+//   background-position: center;
 
-  @media (min-width: $tablet-width) {
-    margin: 0 0 0 auto;
-  }
+//   @media (min-width: $tablet-width) {
+//     margin: 0 0 0 auto;
+//   }
 
-  @media (min-width: $desktop-width) {
-    background: url("../img/photo-city@1x.jpg") no-repeat;
-  }
-}
+//   @media (min-width: $desktop-width) {
+//     background: url("../img/photo-city@1x.jpg") no-repeat;
+//   }
+// }
 
-.benefits__item--secondary .benefits__image {
-  background: url("../img/photo-bridge@1x-tablet.jpg") no-repeat;
-  background-size: cover;
-  background-position-x: 51%;
+// .benefits__item--secondary .benefits__image {
+//   background: url("../img/photo-bridge@1x-tablet.jpg") no-repeat;
+//   background-size: cover;
+//   background-position-x: 51%;
 
-  @media (min-width: $tablet-width) {
-    background-position: top;
-    margin: 0 auto 0 0;
-  }
+//   @media (min-width: $tablet-width) {
+//     background-position: top;
+//     margin: 0 auto 0 0;
+//   }
 
-  @media (min-width: $desktop-width) {
-    background: url("../img/photo-bridge@1x.jpg") no-repeat;
-  }
-}
+//   @media (min-width: $desktop-width) {
+//     background: url("../img/photo-bridge@1x.jpg") no-repeat;
+//   }
+// }

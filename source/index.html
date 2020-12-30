@@ -12,7 +12,14 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__link"></a>
+        <a href="index.html" class="page-header__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="../img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="../img/logotype-tablet.svg">
+            <img class="page-header__logo-image"
+            src="../img/logotype-mobile.svg" alt="Седона. Логотип.Изображены нарисованные красные скалы на голубом фоне.">
+          </picture>
+        </a>
       </div>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -40,11 +47,16 @@
   <main class="page-main">
     <section class="intro intro--index">
       <h1 class="visually-hidden">Добо пожаловать на сайт Седона!</h1>
-      <div class="intro__wrapper intro__wrapper--index"></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="../img/text-index-desktop.svg">
+          <source media="(min-width: 768px)" srcset="../img/text-index-tablet.svg">
+          <img class="intro__header--index" src="../img/text-index.svg" alt="Добро пожаловать в великолепную Седону. Слоган. Потому что Гранд Каньон отстой!">
+        </picture>
     </section>
     <section class="benefits">
       <div class="benefits__wrapper">
-        <h2 class="benefits__headline">Седона &#8212 небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="benefits__headline">Седона &#8212 небольшой городок в Аризоне,
+          заслуживающий большего!         </h2>
         <p class="benefits__subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <ul class="benefits__list">
           <li class="benefits__item benefits__item--main">
@@ -54,9 +66,14 @@
               <p class="benefits__desc benefits__desc--main">Седона не аттракцион для туристов, там течет своя жизнь
               </p>
             </div>
-            <div class="benefits__image"><span class="visually-hidden">Американские флаги развиваются во дворике
+              <picture>
+                <source media="(min-width: 1200px)" srcset="../img/photo-city-desktop.jpg 1x, ../img/photo-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="../img/photo-city-tablet.jpg 1x, ../img/photo-city-tablet@2x.jpg 2x">
+                <source media="(min-width: 568px)" srcset="../img/photo-city-desktop.jpg 1x, ../img/photo-city-desktop@2x.jpg 2x">
+                <img class="benefits__image benefits__image--main" src="../img/photo-city-mobile.jpg" srcset="../img/photo-city-mobile@2x.jpg" alt="Американские флаги развиваются во дворике
                 бледно-зелёного деревянного дома, а на фоне слегка размытого заднего плана виднеются скалистые
-                горы.</span></div>
+                горы.">
+              </picture>
             <section class="details">
               <div class="detail__wrapper">
                 <ul class="details__list">
@@ -76,8 +93,7 @@
                     </p>
                   </li>
                 </ul>
-              </div>
-            </section>
+              </section>
           </li>
           <li class="benefits__item benefits__item--secondary">
             <div class="benefits__item-header benefits__item-header--secondary">
@@ -86,9 +102,15 @@
               <p class="benefits__desc benefits__desc--secondary">Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </div>
-            <div class="benefits__image"><span class="visually-hidden">Тонкое и узкое соединение двух краснокаменных
-                скал, образующие своеобразный мост высоко над пропостью, пройти по которому кажется очень пугающе и
-                опасно.</span></div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../img/photo-bridge-desktop.jpg 1x, ../img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/photo-bridge-tablet.jpg 1x, ../img/photo-bridge-tablet@2x.jpg 2x">
+              <source media="(min-width: 568px)" srcset="../img/photo-bridge-desktop.jpg 1x, ../img/photo-bridge-desktop@2x.jpg 2x">
+              <img class="benefits__image benefits__image--secondary" src="../img/photo-bridge-mobile.jpg" srcset="../img/photo-bridge-mobile@2x.jpg" alt="Тонкое и узкое соединение двух краснокаменных
+              скал, образующие своеобразный мост высоко над пропостью, пройти по которому кажется очень пугающе и
+              опасно">
+            </picture>
+            <!-- <div class="benefits__image"><span class="visually-hidden">.</span></div> -->
           </li>
           <li class="benefits__item">
             <div class="benefits__item-header">
@@ -99,9 +121,10 @@
           </li>
           <li class="benefits__item">
             <div class="benefits__item-header">
-              <h3 class="benefits__caption">Красивая дорога</h3>
+              <h3 class="benefits__caption benefits__caption--4">Красивая дорога</h3>
               <p class="benefits__number">&#8212 №4 &#8212</p>
-              <p class="benefits__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="benefits__desc benefits__desc--4">Ехать в Седону из Лас-Вегаса
+                совсем не скучно!                </p>
             </div>
           </li>
           <li class="benefits__item">
