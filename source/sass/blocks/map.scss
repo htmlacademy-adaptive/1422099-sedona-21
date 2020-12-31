@@ -13,10 +13,11 @@
 
 
   @media (min-width: $tablet-width) {
-    min-width: 768px;
+    width: 100%;
     background: url("../img/map-desktop.png") no-repeat;
     background-position: center bottom;
     background-size: cover;
+    overflow-x: hidden;
   }
 
   @media (min-width: $desktop-width) {

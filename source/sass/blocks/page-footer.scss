@@ -9,7 +9,7 @@
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
-    padding: 36px 60px 36px 60px;
+    padding: 37px 60px 36px 60px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -33,7 +33,11 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding-top: 2px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
   }
 }
 
@@ -46,7 +50,7 @@
 .page-footer__text {
   margin: 0;
   color: $basic-black;
-  margin-top: 43px;
+  margin-top: 44px;
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
@@ -57,7 +61,7 @@
 
 .page-footer__link svg {
   margin-left: 12px;
-  transform: translateY(35%);
+  transform: translateY(37%);
 
   &:hover {
     fill: $main-color;
@@ -71,5 +75,9 @@
     transform: none;
     position: relative;
     top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 4px;
   }
 }

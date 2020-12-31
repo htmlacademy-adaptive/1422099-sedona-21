@@ -36,29 +36,5 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-
-  &::after {
-    content: "";
-    width: 101.6px;
-    height: 84px;
-    background: url("../img/logotype-mobile.svg");
-    position: absolute;
-    transform: translateX(-50%);
-    top: 0;
-    left: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::after {
-      background: url("../img/logotype-tablet.svg");
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      width: 186.6px;
-      height: 96.43px;
-      background: url("../img/logotype-desktop.svg");
-    }
-  }
+  width: 100%;
 }
