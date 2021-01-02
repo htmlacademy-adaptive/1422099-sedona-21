@@ -48,12 +48,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    background: url("../img/back-tablet-large.jpg") no-repeat;
+    background: url("../img/back-tablet.jpg") no-repeat;
     background-position: bottom;
     overflow: hidden;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/back-tablet-large@2x.jpg") no-repeat;
+      background: url("../img/back-tablet@2x.jpg") no-repeat;
+      background-size: cover;
       background-position: bottom;
     }
 
@@ -82,12 +83,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: url("../img/back-desktop-large.jpg") no-repeat;
+    background: url("../img/back-desktop.jpg") no-repeat;
     background-position: bottom;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/back-desktop-large@2x.jpg") no-repeat;
+      background: url("../img/back-desktop@2x.jpg") no-repeat;
+      background-size: cover;
       background-position: bottom;
     }
 
@@ -119,7 +121,6 @@
 .intro__header {
   width: 100%;
   height: auto;
-  margin: 0 20px;
   margin-top: 52px;
   margin-bottom: 67px;
 
@@ -132,7 +133,8 @@
     @include container-tablet();
 
     margin-top: 95px;
-    margin-bottom: 117.4px;
+    margin-bottom: 117px;
+    padding: 0 0 0 2px;
 
     &--index {
       margin-top: 77px;
