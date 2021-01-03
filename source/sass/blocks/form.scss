@@ -45,7 +45,7 @@
       margin-left: 98px;
       margin-right: 35px;
       margin-top: 18px;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
 
       & li:last-child {
         margin-bottom: 31px;
@@ -57,7 +57,7 @@
     &--radioButton {
       justify-content: flex-start;
       margin-left: 4px;
-      margin-top: 34px;
+      margin-top: 35px;
     }
 
     &--user-contact {
@@ -279,7 +279,8 @@
 
     &--tel {
       padding-left: 0;
-      margin-right: 10px;
+      padding-right: 0;
+      margin-right: 16px;
       overflow: hidden;
       width: min-content;
     }
@@ -306,24 +307,25 @@
   }
 
   &--textarea {
-    padding-bottom: 15px;
+    padding-bottom: 13px;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
     text-align: start;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
+    padding: 9px 0 10px 0;
 
     &--user-contact {
       text-align: center;
       position: relative;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
       margin-right: 2px;
 
       &::before {
         content: "";
-        width: 123px;
-        height: 1px;
+        width: 19%;
+        height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
         top: 43%;
@@ -333,8 +335,8 @@
 
       &::after {
         content: "";
-        width: 123px;
-        height: 1px;
+        width: 19%;
+        height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
         top: 43%;
@@ -343,38 +345,64 @@
       }
     }
 
-    &--checkbox {
-      text-align: center;
-      margin: 0 auto;
-      width: 423px;
-      padding-left: 5px;
-      padding-bottom: 27px;
+    &--radioButton {
+      margin-bottom: 34px;
     }
 
-    &--textarea {
-      text-align: center;
+    &--checkbox {
       position: relative;
-      margin-right: 2px;
-      margin-bottom: 40px;
+      text-align: center;
+      margin: 0 auto;
+      white-space: pre;
+      padding: 5px 10px 1px 10px;
 
       &::before {
         content: "";
-        width: 123px;
-        height: 1px;
+        width: 19%;
+        height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
-        top: 41%;
+        top: 31px;
         left: 0;
         transform: translateY(-50%);
       }
 
       &::after {
         content: "";
-        width: 123px;
-        height: 1px;
+        width: 19%;
+        height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
-        top: 41%;
+        top: 31px;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--textarea {
+      text-align: center;
+      position: relative;
+      margin-right: 2px;
+      margin-bottom: 43px;
+
+      &::before {
+        content: "";
+        width: 19%;
+        height: 0.5px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        width: 19%;
+        height: 0.5px;
+        background-color: #dbdbdb;
+        position: absolute;
+        top: 18px;
         right: 0;
         transform: translateY(-50%);
       }
@@ -382,19 +410,23 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+
     &--radioButton {
       text-align: center;
       margin: 0 58px 0 10px;
     }
 
     &--checkbox {
+      margin-bottom: 10px;
+
       &::before {
         content: "";
         width: 280px;
         height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
-        top: 42px;
+        top: 31px;
         left: 0;
         transform: translateY(-50%);
       }
@@ -405,7 +437,7 @@
         height: 0.5px;
         background-color: #dbdbdb;
         position: absolute;
-        top: 42px;
+        top: 31px;
         right: 0;
         transform: translateY(-50%);
       }
@@ -418,18 +450,18 @@
         content: "";
         width: 280px;
         height: 0.5px;
-        top: 41%;
+        top: 18px;
       }
 
       &::after {
         width: 280px;
         height: 0.5px;
-        top: 41%;
+        top: 18px;
       }
     }
 
     &--textarea {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
 
       &::before {
         content: "";
@@ -525,21 +557,22 @@
   @media (min-width: $tablet-width) {
     &--username {
       font-size: 18px;
+      padding: 18px 22px 14px;
     }
 
     &--email {
       padding: 18px 22px 14px 22px;
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      &--email {
-        padding: 19px 22px 14px 22px;
-      }
+  @media (min-width: $desktop-width) {
+    &--email {
+      padding: 19px 22px 14px 22px;
+    }
 
-      &--tel {
-        width: 300px;
-        padding: 19px 22px 14px 7px;
-      }
+    &--tel {
+      width: 300px;
+      padding: 18px 22px 14px 21px;
     }
   }
 }
@@ -552,7 +585,7 @@
   border: none;
   resize: none;
 
-  padding: 2px 21px 2px 20px;
+  padding: 2px 21px 4px 20px;
   width: 100%;
 
   &:hover {
@@ -576,7 +609,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 5px 21px 0 22px;
+    padding: 6px 21px 0 22px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 21px 0 22px;
   }
 }

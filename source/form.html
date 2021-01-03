@@ -12,7 +12,14 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__link"></a>
+        <a href="index.html" class="page-header__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img class="page-header__logo-image"
+            src="img/logotype-mobile.svg" alt="Седона. Логотип.Изображены нарисованные красные скалы на голубом фоне.">
+          </picture>
+        </a>
       </div>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -41,7 +48,12 @@
   <main class="page-main">
     <section class="intro">
       <h2 class="visually-hidden">Добро пожаловать на сайт Седона! Сейчас вы в разделе размещения отзыва.</h2>
-      <div class="intro__wrapper intro__wrapper--form"></div>
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/text-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/text-sedona-tablet.svg">
+        <img class="intro__header intro__header--form" src="img/text-sedona.svg" alt="Слово Седона. Написано крупными латинским буквами белого цвета, на фоне скалисто-горного пейзажа.">
+      </picture>
+      <!-- <div class="intro__wrapper intro__wrapper--form"></div> -->
     </section>
     <section class="review">
       <div class="review__wrapper">
@@ -107,8 +119,7 @@
             </ul>
           </fieldset>
           <fieldset class="review__item review__item--checkbox">
-            <p class="form__heading form__heading--checkbox">
-              Посещенные достопримечательности:
+            <p class="form__heading form__heading--checkbox">Посещенные </br> достопримечательности:
             </p>
             <ul class="form__list form__list--checkbox">
               <li class="form__item checkbox form__item--checkbox">
