@@ -1,7 +1,7 @@
 .videogram__wrapper {
   margin: 0 auto;
   border-top: 1px solid #e5e5e5;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     @include container-tablet();
@@ -12,14 +12,14 @@
   @media (min-width: $desktop-width) {
     @include container-desktop();
 
-    padding-bottom: 85px;
+    padding-bottom: 86px;
   }
 }
 
 .videogram__title {
   @include caption-style();
 
-  padding-top: 31px;
+  padding-top: 32px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -44,7 +44,7 @@
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     width: 490px;
-    margin-bottom: 81px;
+    margin-bottom: 79px;
 
     & br {
       display: none;
@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 78px;
+    margin-bottom: 76px;
     white-space: pre-wrap;
   }
 }
