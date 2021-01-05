@@ -12,6 +12,7 @@
 .player__screen {
   position: relative;
   display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -20,28 +21,27 @@
 
 .player__screen-image {
   width: 100%;
-  height: 201px;
-  background: url("../img/video-desktop.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: auto;
+  margin: 0 auto;
 
 
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 500px;
-    background: url("../img/video-desktop.jpg") no-repeat;
+    // background: url("../img/video-desktop.jpg") no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    background: url("../img/video-desktop.jpg") no-repeat;
+    // background: url("../img/video-desktop.jpg") no-repeat;
   }
 }
 
 .player__volume {
   width: 88%;
+  max-width: 640px;
   height: 45px;
   background-color: rgba($basic-black, 0.6);
   position: absolute;
@@ -51,6 +51,7 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    max-width: none;
     margin: 0 auto;
     height: 93px;
   }
@@ -98,6 +99,7 @@
 
 .player__tools {
   width: 88%;
+  max-width: 640px;
   margin: 0 auto;
   height: 66px;
   background-color: #f2f2f2;
@@ -108,6 +110,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    max-width: none;
     height: 93px;
     z-index: 3;
     background-color: transparent;
