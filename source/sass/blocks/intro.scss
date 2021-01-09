@@ -119,8 +119,8 @@
 }
 
 .intro__header {
-  width: 100%;
-  height: auto;
+  // width: 100%;
+  // height: auto;
   margin-top: 52px;
   margin-bottom: 67px;
 
@@ -137,6 +137,8 @@
     padding: 0;
 
     &--index {
+      width: 461px;
+      height: 349.97px;
       margin-top: 77px;
       margin-bottom: 91px;
     }
