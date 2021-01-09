@@ -147,14 +147,10 @@
   @media (min-width: $desktop-width) {
     @include container-desktop();
 
-    width: 459.5px;
-    height: 79.8px;
     margin-top: 101px;
     margin-bottom: 120.2px;
 
     &--index {
-      width: 461px;
-      height: 349.97px;
       margin-top: 78px;
       margin-bottom: 90px;
     }
