@@ -1,0 +1,33 @@
+// .logotype {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.logotype__mobile {
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.logotype__tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logotype__desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
