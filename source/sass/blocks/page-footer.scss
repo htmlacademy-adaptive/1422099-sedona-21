@@ -9,7 +9,7 @@
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
-    padding: 37px 60px 36px 60px;
+    padding: 36px 60px 36px 60px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -59,25 +59,23 @@
   }
 }
 
+
 .page-footer__link svg {
-  margin-left: 12px;
-  transform: translateY(37%);
+  margin-left: 13px;
+  margin-top: 25px;
+  fill: $basic-black;
 
   &:hover {
     fill: $main-color;
   }
 
   &:active {
+    fill: $basic-black;
     opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
     transform: none;
-    position: relative;
-    top: 5px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 4px;
+    margin-top: 8px;
   }
 }

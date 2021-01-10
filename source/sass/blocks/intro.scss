@@ -119,8 +119,6 @@
 }
 
 .intro__header {
-  width: 100%;
-  height: auto;
   margin-top: 52px;
   margin-bottom: 67px;
 
@@ -132,11 +130,15 @@
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
+    width: 456.9px;
+    height: 77.6px;
     margin-top: 95px;
     margin-bottom: 117px;
-    padding: 0 0 0 2px;
+    padding: 0;
 
     &--index {
+      width: 461px;
+      height: 349.97px;
       margin-top: 77px;
       margin-bottom: 91px;
     }

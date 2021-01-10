@@ -1,5 +1,4 @@
 .details {
-
   background-color: $basic-white;
   grid-column: 1/ span 2;
   order: 1;
@@ -37,6 +36,8 @@
   padding: 0 20px;
   width: 100%;
   text-align: start;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -44,9 +45,58 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    position: relative;
 
     &--second {
       order: 3;
+    }
+  }
+}
+
+.details__icon {
+  &--house {
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
+
+  &--gift {
+    margin-top: 0;
+    margin-left: 5px;
+    position: relative;
+    bottom: 4px;
+  }
+
+  &--burger {
+    position: relative;
+    top: 3px;
+    right: 2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--house {
+      top: 0;
+      left: 0;
+      margin-top: 9px;
+      width: 76px;
+      height: 72px;
+    }
+
+    &--gift {
+      position: relative;
+      margin-top: 6px;
+      margin-left: 0;
+      width: 64px;
+      height: 75px;
+      bottom: 0;
+    }
+
+    &--burger {
+      margin-top: 12px;
+      width: 76px;
+      height: 67.9px;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -56,105 +106,55 @@
 
   position: relative;
   padding: 10px 49px;
-
-  &::before {
-    content: "";
-    position: absolute;
-  }
+  flex-grow: 1;
 
   &--first {
-    &::before {
-      top: 0;
-      left: 1px;
-      width: 39px;
-      height: 36.83px;
-      background: url("../img/icon-house.svg") no-repeat;
-    }
+    padding: 10px 10px 10px 9px;
   }
 
   &--second {
-    padding: 7px 50px 10px;
-
-    &::before {
-      top: -4px;
-      left: 5px;
-      width: 32px;
-      height: 38px;
-      background: url("../img/icon-gift.svg") no-repeat;
-    }
+    padding: 7px 10px 10px 13px;
   }
 
   &--last {
-    padding: 8px 50px 2px;
-
-    &::before {
-      top: 3px;
-      left: -2px;
-      width: 40px;
-      height: 34.9px;
-      background: url("../img/icon-burger.svg") no-repeat;
-    }
+    padding: 8px 11px 2px 10px;
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     font-size: 21px;
     line-height: 26px;
+    width: 100%;
+    padding: 0;
 
-    &::before {
-      position: relative;
-      background-size: cover;
-      margin-bottom: 25px;
-    }
 
     &--first {
-      &::before {
-        width: 75px;
-        height: 72px;
-        top: -1px;
-        left: -1px;
-      }
+      margin-top: 22px;
     }
 
     &--second {
-      &::before {
-        width: 64px;
-        height: 75px;
-        top: -1px;
-        left: -1px;
-      }
+      margin-top: 11px;
     }
 
     &--last {
-      &::before {
-        width: 78px;
-        height: 68px;
-        margin-bottom: 31px;
-        top: 4px;
-        left: -2px;
-      }
+      margin-top: 27px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    &::before {
-      margin-bottom: 26px;
+    &--first {
+      margin-top: 27px;
+    }
+
+    &--second {
+      margin-top: 22px;
     }
 
     &--last {
-      &::before {
-        margin-bottom: 30px;
-        left: 0;
-      }
-    }
-
-    &--first {
-      &::before {
-        width: 76px;
-        height: 72px;
-      }
+      margin-top: 24px;
     }
   }
 }
@@ -180,15 +180,15 @@
 
   @media (min-width: $tablet-width) {
     &--first {
-      padding: 13px 32px 5px;
+      padding: 18px 32px 0;
     }
 
     &--last {
-      padding: 22px 52px 5px;
+      padding: 24px 52px 5px;
     }
 
     &--second {
-      padding: 3px 31px 15px;
+      padding: 9px 31px 12px;
     }
   }
 
@@ -200,7 +200,7 @@
     }
 
     &--first {
-      padding: 14px 0 10px;
+      padding: 23px 0 10px;
     }
 
     &--last {
@@ -208,7 +208,7 @@
     }
 
     &--second {
-      padding: 12px 0 10px;
+      padding: 19px 0 6px;
     }
   }
 }
