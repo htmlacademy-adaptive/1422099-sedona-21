@@ -98,7 +98,7 @@
       content: "";
       width: 58px;
       height: 58px;
-      background: url("../img/phone.svg") no-repeat;
+      // background: url("../img/phone.svg") no-repeat;
       background-color: #e6e6e6;
       background-position: center;
       position: absolute;
@@ -114,7 +114,7 @@
       content: "";
       width: 58px;
       height: 58px;
-      background: url("../img/mail.svg") no-repeat;
+      // background: url("../img/mail.svg") no-repeat;
       background-color: #e6e6e6;
       background-position: center;
       position: absolute;
@@ -164,6 +164,43 @@
       &::after {
         right: 79px;
       }
+    }
+  }
+}
+
+
+.form__icon {
+  position: absolute;
+  z-index: 4;
+
+
+  &--email {
+    width: 16px;
+    height: 12px;
+    bottom: 23px;
+    right: 21px;
+  }
+
+  &--tel {
+    width: 18px;
+    height: 18px;
+    bottom: 20px;
+    right: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--email {
+      width: 16px;
+      height: 12px;
+      bottom: 22px;
+      right: 21px;
+    }
+
+    &--tel {
+      width: 18px;
+      height: 18px;
+      bottom: 20px;
+      right: 100px;
     }
   }
 }

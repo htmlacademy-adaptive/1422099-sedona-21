@@ -127,6 +127,11 @@
     margin-bottom: 85px;
   }
 
+  &--form {
+    width: 229px;
+    height: 39px;
+  }
+
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
@@ -142,13 +147,18 @@
       margin-top: 77px;
       margin-bottom: 91px;
     }
+
+    &--form {
+      width: 457px;
+      height: 78px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include container-desktop();
 
     margin-top: 101px;
-    margin-bottom: 120.2px;
+    margin-bottom: 122.2px;
 
     &--index {
       margin-top: 78px;
