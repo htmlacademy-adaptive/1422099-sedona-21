@@ -55,8 +55,58 @@
 
 .tools__icon {
   fill: #5c6870;
+  z-index: 2;
+
+  &--cc {
+    margin-top: 130px;
+    margin-left: 2px;
+  }
+
+  &--replay {
+    margin-top: 127px;
+    margin-left: 20px;
+  }
+
+  &--fullscreen {
+    margin-top: 130px;
+    margin-left: 17px;
+  }
 
   @media (min-width: $tablet-width) {
     fill: $basic-white;
+
+    &--cc {
+      margin-top: 130px;
+      margin-left: 2px;
+    }
+
+    &--replay {
+      margin-top: 127px;
+      margin-left: 30px;
+    }
+
+    &--fullscreen {
+      margin-top: 130px;
+      margin-left: 16px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    fill: $basic-white;
+
+    &--cc {
+      margin-top: 130px;
+      margin-left: 1px;
+    }
+
+    &--replay {
+      margin-top: 127px;
+      margin-left: 28px;
+    }
+
+    &--fullscreen {
+      margin-top: 130px;
+      margin-left: 15px;
+    }
   }
 }

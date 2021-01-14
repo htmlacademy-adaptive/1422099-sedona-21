@@ -6,13 +6,14 @@
   @media (min-width: $tablet-width) {
     @include container-tablet();
 
+    border-top: none;
     padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
     @include container-desktop();
 
-    padding-bottom: 86px;
+    padding-bottom: 84px;
   }
 }
 
