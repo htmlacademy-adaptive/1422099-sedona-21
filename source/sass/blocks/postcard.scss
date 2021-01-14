@@ -27,15 +27,16 @@
 
 .postcard__link {
   overflow: hidden;
-  display: contents;
+  // display: contents;
+  display: block;
 }
 
 .postcard__userphoto {
+  margin-top: 23px;
+  border: none;
   width: 100%;
   max-width: 400px;
   height: auto;
-  margin-top: 23px;
-  border: none;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -203,9 +204,10 @@
   }
 }
 
-.postcard__like-button svg {
+.postcard__icon {
   fill: black;
   opacity: 0.3;
+  overflow: hidden;
 
   @media (min-width: $desktop-width) {
     position: relative;
