@@ -21,7 +21,7 @@ const html = () => {
   .pipe(gulp.dest("build"))
 }
 
-exports.htmlmin = htmlmin;
+exports.htmlmin = html;
 
 // imagemin
 
@@ -108,7 +108,7 @@ exports.default = gulp.series(
 
 // build
 
-const build = gulp.series {
+// const build = gulp.series {
 
-}
+// }
 
