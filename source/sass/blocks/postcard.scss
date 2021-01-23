@@ -208,6 +208,8 @@
   fill: black;
   opacity: 0.3;
   overflow: hidden;
+  width: 23px;
+  height: 21px;
 
   @media (min-width: $desktop-width) {
     position: relative;

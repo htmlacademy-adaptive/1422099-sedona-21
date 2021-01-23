@@ -97,6 +97,10 @@
       order: -1;
       width: 50%;
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
       &::after {
         content: "";
