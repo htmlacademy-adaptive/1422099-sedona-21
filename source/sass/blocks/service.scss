@@ -1,7 +1,7 @@
 .service__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 33px 20px 49px;
+  padding: 35px 20px 49px;
 
   @media (min-width: $tablet-width) {
     padding: 56px 20px 57px;
@@ -76,10 +76,10 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    padding: 13.5px 5px 17.5px 5px;
+    padding: 13.5px 20px 17.5px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px 0;
+    padding: 15px 20px 17px 20px;
   }
 }

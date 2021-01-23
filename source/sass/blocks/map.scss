@@ -1,6 +1,7 @@
 // стили карты
 .map {
   width: 100%;
+  border: none;
 }
 
 .map__wrapper {
@@ -10,6 +11,7 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
+  display: flex;
 
 
   @media (min-width: $tablet-width) {
@@ -30,4 +32,5 @@
 
 .map__iframe {
   width: 100%;
+  border: 0;
 }

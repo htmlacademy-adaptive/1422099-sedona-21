@@ -108,14 +108,15 @@
   font-size: inherit;
   margin: 0;
   padding: 10px 0 1px;
+  text-align: start;
 
   @media (min-width: $tablet-width) {
-    padding: 0 1px 0 0;
+    padding: 5px 1px 0 0;
     margin-bottom: 1px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 1px;
+    padding: 5px 1px 0 0;
     margin-bottom: 2px;
     margin-top: 15px;
 
@@ -134,11 +135,11 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 1px 0 0;
+    padding: 0 1px 5px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 1px;
+    padding: 0 1px 5px 0;
   }
 }
 
@@ -208,6 +209,8 @@
   fill: black;
   opacity: 0.3;
   overflow: hidden;
+  width: 23px;
+  height: 21px;
 
   @media (min-width: $desktop-width) {
     position: relative;
