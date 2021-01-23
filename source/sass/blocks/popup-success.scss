@@ -7,7 +7,7 @@
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 5px 12px -8px $basic-black;
-  z-index: 2;
+  z-index: 5;
 
   @media (min-width: $tablet-width) {
     width: 100%;
