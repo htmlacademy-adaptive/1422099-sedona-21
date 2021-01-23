@@ -107,6 +107,7 @@
   position: relative;
   padding: 10px 49px;
   flex-grow: 1;
+  width: 80%;
 
   &--first {
     padding: 10px 10px 10px 9px;
@@ -128,8 +129,7 @@
     font-size: 21px;
     line-height: 26px;
     width: 100%;
-    padding: 0;
-
+    padding: 0 20px;
 
     &--first {
       margin-top: 22px;
@@ -188,7 +188,7 @@
     }
 
     &--second {
-      padding: 9px 31px 12px;
+      padding: 9px 31px 12px 32px;
     }
   }
 
